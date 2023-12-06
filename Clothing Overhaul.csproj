@@ -8,43 +8,43 @@
 
   <ItemGroup>
     <Reference Include="Eco.Core">
-      <HintPath>C:\Users\pondo\Desktop\EcoModding\Eco Modkit\ReferenceAssemblies\Eco.Core.dll</HintPath>
+      <HintPath>..\Eco Modkit\ReferenceAssemblies\Eco.Core.dll</HintPath>
     </Reference>
     <Reference Include="Eco.Gameplay">
-      <HintPath>C:\Users\pondo\Desktop\EcoModding\Eco Modkit\ReferenceAssemblies\Eco.Gameplay.dll</HintPath>
+      <HintPath>..\Eco Modkit\ReferenceAssemblies\Eco.Gameplay.dll</HintPath>
     </Reference>
     <Reference Include="Eco.ModKit">
-      <HintPath>C:\Users\pondo\Desktop\EcoModding\Eco Modkit\ReferenceAssemblies\Eco.ModKit.dll</HintPath>
+      <HintPath>..\Eco Modkit\ReferenceAssemblies\Eco.ModKit.dll</HintPath>
     </Reference>
     <Reference Include="Eco.Mods">
-      <HintPath>C:\Users\pondo\Desktop\EcoModding\Eco Modkit\ReferenceAssemblies\Eco.Mods.dll</HintPath>
+      <HintPath>..\Eco Modkit\ReferenceAssemblies\Eco.Mods.dll</HintPath>
     </Reference>
     <Reference Include="Eco.Networking.ENet">
-      <HintPath>C:\Users\pondo\Desktop\EcoModding\Eco Modkit\ReferenceAssemblies\Eco.Networking.ENet.dll</HintPath>
+      <HintPath>..\Eco Modkit\ReferenceAssemblies\Eco.Networking.ENet.dll</HintPath>
     </Reference>
     <Reference Include="Eco.Plugins">
-      <HintPath>C:\Users\pondo\Desktop\EcoModding\Eco Modkit\ReferenceAssemblies\Eco.Plugins.dll</HintPath>
+      <HintPath>..\Eco Modkit\ReferenceAssemblies\Eco.Plugins.dll</HintPath>
     </Reference>
     <Reference Include="Eco.Shared">
-      <HintPath>C:\Users\pondo\Desktop\EcoModding\Eco Modkit\ReferenceAssemblies\Eco.Shared.dll</HintPath>
+      <HintPath>..\Eco Modkit\ReferenceAssemblies\Eco.Shared.dll</HintPath>
     </Reference>
     <Reference Include="Eco.Simulation">
-      <HintPath>C:\Users\pondo\Desktop\EcoModding\Eco Modkit\ReferenceAssemblies\Eco.Simulation.dll</HintPath>
+      <HintPath>..\Eco Modkit\ReferenceAssemblies\Eco.Simulation.dll</HintPath>
     </Reference>
     <Reference Include="Eco.Stats">
-      <HintPath>C:\Users\pondo\Desktop\EcoModding\Eco Modkit\ReferenceAssemblies\Eco.Stats.dll</HintPath>
+      <HintPath>..\Eco Modkit\ReferenceAssemblies\Eco.Stats.dll</HintPath>
     </Reference>
     <Reference Include="Eco.WebServer">
-      <HintPath>C:\Users\pondo\Desktop\EcoModding\Eco Modkit\ReferenceAssemblies\Eco.WebServer.dll</HintPath>
+      <HintPath>..\Eco Modkit\ReferenceAssemblies\Eco.WebServer.dll</HintPath>
     </Reference>
     <Reference Include="Eco.World">
-      <HintPath>C:\Users\pondo\Desktop\EcoModding\Eco Modkit\ReferenceAssemblies\Eco.World.dll</HintPath>
+      <HintPath>..\Eco Modkit\ReferenceAssemblies\Eco.World.dll</HintPath>
     </Reference>
     <Reference Include="Eco.WorldGenerator">
-      <HintPath>C:\Users\pondo\Desktop\EcoModding\Eco Modkit\ReferenceAssemblies\Eco.WorldGenerator.dll</HintPath>
+      <HintPath>..\Eco Modkit\ReferenceAssemblies\Eco.WorldGenerator.dll</HintPath>
     </Reference>
     <Reference Include="EcoServer">
-      <HintPath>C:\Users\pondo\Desktop\EcoModding\Eco Modkit\ReferenceAssemblies\EcoServer.dll</HintPath>
+      <HintPath>..\Eco Modkit\ReferenceAssemblies\EcoServer.dll</HintPath>
     </Reference>
   </ItemGroup>
 
