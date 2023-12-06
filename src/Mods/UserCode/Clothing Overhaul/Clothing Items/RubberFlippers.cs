@@ -24,7 +24,6 @@ namespace Eco.Mods.TechTree
     using System;
     using ClothingOverhaul;
     using Eco.World.Blocks;
-    using static System.Runtime.InteropServices.JavaScript.JSType;
 
     /// <summary>
     /// <para>
