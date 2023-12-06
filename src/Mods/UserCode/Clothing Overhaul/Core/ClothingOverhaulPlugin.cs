@@ -33,12 +33,12 @@ namespace ClothingOverhaul
     {
         public string GetCategory() => "Mod";
 
-        public string GetStatus() => (ClothingOverhaulBenefits.Any() ? "Loaded Clothing Overhaul:" + string.Concat(ClothingOverhaulBenefits.Select(overhaul => " " + overhaul.GetType().Name)) : "No Clothing Overhaul loaded");
+        public string GetStatus() => (ClothingOverhaulMod.Any() ? "Loaded Clothing Overhaul:" + string.Concat(ClothingOverhaulMod.Select(overhaul => " " + overhaul.GetType().Name)) : "No Clothing Overhaul loaded");
 
-        public List<ILoggedInClothingOverhaul> ClothingOverhaulBenefits { get; } = new List<ILoggedInClothingOverhaul>();
+        public List<ILoggedInClothingOverhaul> ClothingOverhaulMod { get; } = new List<ILoggedInClothingOverhaul>();
         public void Initialize(TimedTask timer)
         {
-            ClothingOverhaulBenefits.AddRange(DiscoverILoggedInClothingOverhaul());
+            ClothingOverhaulMod.AddRange(DiscoverILoggedInClothingOverhaul());
             Log.WriteLine(Localizer.DoStr("Clothing Overhaul Status: " + GetStatus()));
             ModsChangeBenefits();
             UserManager.OnUserLoggedIn.Add(OnUserLoggedIn);
@@ -54,16 +54,16 @@ namespace ClothingOverhaul
         }
         private void OnUserLoggedIn(User user)
         {
-            foreach(ILoggedInClothingOverhaul benefit in ClothingOverhaulBenefits)
+            foreach(ILoggedInClothingOverhaul modifier in ClothingOverhaulMod)
             {
-                benefit.ApplyClothingOverhaulToUser(user);
+                modifier.ApplyClothingOverhaulToUser(user);
             }
         }
         private void OnUserLoggedOut(User user)
         {
-            foreach(ILoggedInClothingOverhaul benefit in ClothingOverhaulBenefits)
+            foreach(ILoggedInClothingOverhaul modifier in ClothingOverhaulMod)
             {
-                benefit.RemoveClothingOverhaulFromUser(user);
+                modifier.RemoveClothingOverhaulFromUser(user);
             }
         }
     }
