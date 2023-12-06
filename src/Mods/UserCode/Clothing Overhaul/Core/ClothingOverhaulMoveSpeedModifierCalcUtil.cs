@@ -38,7 +38,8 @@ namespace ClothingOverhaul
             bool isWearingShoeItem = false;
             Block blockUnderPlayer = Eco.World.World.GetBlock((user.Position.XYZi() - new Vector3i(0, 1, 0)));                                  // Get the block under the player by subracting 1 from the Y Axis.
             Type blockUnderPlayerBlockType = blockUnderPlayer.GetType();       
-
+            
+            if (blockUnderPlayer.IsWater()) { blockUnderPlayerBlockType = typeof(WaterBlock); }                                                 // Water Blocks become water blocks.
             if (blockUnderPlayer.ToString().Contains("Crushed")) { blockUnderPlayerBlockType = typeof(CrushedBasaltBlock); }                    // Any blocks with "Crushed" in the name become CrushedBasaltBlock to reduce dictionary entries.
             if (blockUnderPlayer.ToString().Contains("AsphaltConcrete")) { blockUnderPlayerBlockType = typeof(AsphaltConcreteCubeBlock); }      // Any blocks with "AsphaltConcrete" in the name become AsphaltConcreteCubeBlock to reduce dictionary entries.
             if (blockUnderPlayer.ToString().Contains("StoneRoad")) { blockUnderPlayerBlockType = typeof(StoneRoadCubeBlock); }                  // Any blocks with "StoneRoad" in the name become StoneRoadCubeBlock to reduce dictionary entries.
