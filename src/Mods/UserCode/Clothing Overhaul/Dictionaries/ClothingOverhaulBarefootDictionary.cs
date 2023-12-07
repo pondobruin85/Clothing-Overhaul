@@ -36,17 +36,15 @@ namespace ClothingOverhaul
             { typeof(BasaltBlock),                  0.0f          },  //  Solid Rock Type Blocks      
             { typeof(CrushedBasaltBlock),          -0.2f          },  //  Crushed Type Blocks
             { typeof(TailingsBlock),               -0.2f          },  //  Tailings Blocks
-            { typeof(DirtBlock),                    0.0f          },  //  Dirt Blocks
+            { typeof(DirtBlock),                    0.0f     /0.9f},  //  Dirt Blocks        (0.9 Is Eco's built in Efficiency Multiplier) 
             { typeof(ClayBlock),                   -0.1f          },  //  Clay Blocks   
             { typeof(MudBlock),                    -0.1f          },  //  Mud Blocks    
-            { typeof(SandBlock),                  -0.15f      /.8f},  //  Sand Blocks        (0.8 Is Eco's built in Efficiency Multiplier)            
-            { typeof(CompostBlock),               -0.15f          },  //  Compost Blocks
-            { typeof(GarbageBlock),               -0.15f          },  //  Garbage Blocks
+            { typeof(SandBlock),                  -0.15f     /0.8f},  //  Sand Blocks        (0.8 Is Eco's built in Efficiency Multiplier)            
+            { typeof(CompostBlock),               -0.15f          },  //  Compost Blocks           
             { typeof(SewageBlock),                -0.15f          },  //  Sewage Blocks            
             { typeof(WetTailingsBlock),           -0.15f          },  //  WetTailing Blocks            
             { typeof(CottonCarpetBlock),           10.0f          },  //  Carpet Blocks
-            { typeof(WaterBlock),                   2.0f          },  //  Water Blocks
-            { typeof(DirtRampBlock),                2.0f    /1.05f},  //  Dirt Ramp Blocks   (1.05 Modded efficiency)  
+            { typeof(WaterBlock),                   2.0f          },  //  Water Blocks            
             { typeof(DirtRoadBlock),                2.0f    /1.05f},  //  Dirt Road Blocks   (1.05 Modded efficiency)         
             { typeof(StoneRoadCubeBlock),           2.5f     /1.1f},  //  Stone Roads        (1.1 Is Eco's built in Efficiency Multiplier)
             { typeof(AsphaltConcreteCubeBlock),     3.0f     /1.2f},  //  Asphalt Roads      (1.2 Is Eco's built in Efficiency Multiplier)
