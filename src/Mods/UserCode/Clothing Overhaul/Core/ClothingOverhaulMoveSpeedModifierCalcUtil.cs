@@ -45,8 +45,9 @@ namespace ClothingOverhaul
             return blockAtPlayer;
         }
         private static Type GetBlockTypeAffectingUserMovement(Block blockAtPlayer)
-        {            
+        {         
             Type blockAtPlayerBlockType = typeof(HewnLogCubeBlock);            
+            if (blockAtPlayer is DirtRoadBlock) { return typeof(DirtRoadBlock); }                                       // Return Dirt Roads first because they are also dirt blocks.
             if (blockAtPlayer is DirtBlock) { return typeof(DirtBlock); }                                               // Any blocks that inherit from Dirt Block become Dirt Block to reduce dictionary entries..
             if (blockAtPlayer is IWaterBlock) { return typeof(WaterBlock); }                                            // Water Blocks become water blocks.
             if (blockAtPlayer is PlantBlock) { return typeof(SandBlock); }                                              // All Plant blocks become sand blocks.
@@ -58,7 +59,6 @@ namespace ClothingOverhaul
             if (blockAtPlayer is MudBlock) { return typeof(ClayBlock); }                                                // Mud treated as Clay.
             if (blockAtPlayer.ToString().Contains("AsphaltConcrete")) { return typeof(AsphaltConcreteCubeBlock); }      // Any blocks with "AsphaltConcrete" in the name become AsphaltConcreteCubeBlock to reduce dictionary entries.
             if (blockAtPlayer.ToString().Contains("StoneRoad")) { return typeof(StoneRoadCubeBlock); }                  // Any blocks with "StoneRoad" in the name become StoneRoadCubeBlock to reduce dictionary entries.
-            if (blockAtPlayer.ToString().Contains("DirtRamp")) { return typeof(DirtRoadBlock); }                        // Any blocks with "DirtRamp" in the name become DirtRoadBlock to reduce dictionary entries.
             if (blockAtPlayer.ToString().Contains("Crushed")) { return typeof(CrushedBasaltBlock); }                    // Any blocks with "Crushed" in the name become CrushedBasaltBlock to reduce dictionary entries.
             if (blockAtPlayer.ToString().Contains("Concentrate")) { return typeof(SandBlock); }                         // Any blocks with "Concentrate" in the name become SandBlock to reduce dictionary entries.
             if (blockAtPlayer.ToString().Contains("Garbage")) { return typeof(SandBlock); }                             // Any blocks with "Garbage" in the name become SandBlock to reduce dictionary entries.
