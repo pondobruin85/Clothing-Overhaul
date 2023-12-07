@@ -31,11 +31,29 @@ using User = Eco.Gameplay.Players.User;
 namespace ClothingOverhaul
 {
     public sealed class ClothingOverhaulMoveSpeedModifierCalcUtil
-    {        
+    {
+        private static bool IsWearingShoeItem(User user)
+        {
+            foreach (ItemStack playerInventoryItem in user.Inventory.Clothing.NonEmptyStacks)                                                   //Go through the player's clothing and sum the movespeed modifiers to moveSpeedModifierSum;
+            {
+                ClothingItem? clothingItem = playerInventoryItem.Item as ClothingItem;
+                if (clothingItem != null && clothingItem.Slot == AvatarAppearanceSlots.Shoes)
+                {
+                    return true;
+                }                
+            }
+            return false;
+        }
+        private static Block GetBlockAtUser(User user)
+        {
+
+
+        }
+
         public static float GetMovementSpeedModifierByBlockType(User user)
         {
             float moveSpeedModifierSum = 0;
-            bool isWearingShoeItem = false;
+            bool isWearingShoeItem = IsWearingShoeItem(user);
             Block blockUnderPlayer = Eco.World.World.GetBlock(user.Position.XYZi());                                                          // Block at players legs (mostly ramps).
             if (blockUnderPlayer.GetType() == typeof(EmptyBlock))
             { blockUnderPlayer = Eco.World.World.GetBlock(user.Position.XYZi() - new Vector3i(0,1,0)); }                                        // If no block at player legs, get ramp below.
