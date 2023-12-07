@@ -25,14 +25,11 @@ namespace ClothingOverhaul
     public class ClothingOverhaulModifierFunction : IClothingOverhaulModifierFunction
     {        
         public float CalculateModifier(User user)
-        {
-            float baseMovementSpeedReduction = 1.8f;           // Reducing base movespeed to 1.5.
-            float movespeedRatio = 0.698529f;                  // Convert from 10 Rating to proper scale.
+        {            
             try
             {            
-                float dictionaryValue = ClothingOverhaulMoveSpeedModifierCalcUtil.GetMovementSpeedModifierByBlockType(user);
-                float totalMovespeedModifier = (movespeedRatio * dictionaryValue) - baseMovementSpeedReduction ;
-                return totalMovespeedModifier;
+                float calculatedValue = ClothingOverhaulMoveSpeedModifierCalcUtil.GetMovementSpeedModifier(user);
+                return calculatedValue;
             }
             catch {}
             return 0;                       
