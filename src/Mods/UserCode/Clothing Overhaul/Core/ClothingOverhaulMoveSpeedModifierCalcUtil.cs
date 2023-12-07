@@ -44,9 +44,9 @@ namespace ClothingOverhaul
             }
             return false;
         }
-        private static Block GetBlockAtUser(User user)
+        private static Block GetBlockToUse(User user)
         {
-
+            Block blockAtPlayer = Eco.World.World.GetBlock(user.Position.XYZi());
 
         }
 
