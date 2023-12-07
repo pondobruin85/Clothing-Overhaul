@@ -39,7 +39,7 @@ namespace ClothingOverhaul
             { typeof(DirtBlock),                    2.0f          },  //  Dirt Blocks
             { typeof(ClayBlock),                    1.5f          },  //  Clay Blocks   
             { typeof(MudBlock),                     1.5f          },  //  Mud Blocks    
-            { typeof(SandBlock),                    1.0f     /0.8f},  //  Sand Blocks    (0.8 Is Eco's built in Efficiency Multiplier)            
+            { typeof(SandBlock),                    1.0f          },  //  Sand Blocks    (0.8 Is Eco's built in Efficiency Multiplier)            
             { typeof(CompostBlock),                 1.0f          },  //  Compost Blocks
             { typeof(GarbageBlock),                 1.0f          },  //  Garbage Blocks
             { typeof(SewageBlock),                  1.0f          },  //  Sewage Blocks            
@@ -48,8 +48,8 @@ namespace ClothingOverhaul
             { typeof(WaterBlock),                   3.0f          },  //  Water Blocks
             { typeof(DirtRampBlock),                3.0f          },  //  Dirt Ramp Blocks
             { typeof(DirtRoadBlock),                3.0f          },  //  Dirt Road Blocks            
-            { typeof(StoneRoadCubeBlock),           3.5f     /1.1f},  //  Stone Roads    (1.1 Is Eco's built in Efficiency Multiplier)
-            { typeof(AsphaltConcreteCubeBlock),     4.0f     /1.2f},  //  Asphalt Roads  (1.2 Is Eco's built in Efficiency Multiplier)
+            { typeof(StoneRoadCubeBlock),           3.5f          },  //  Stone Roads    (1.1 Is Eco's built in Efficiency Multiplier)
+            { typeof(AsphaltConcreteCubeBlock),     4.0f          },  //  Asphalt Roads  (1.2 Is Eco's built in Efficiency Multiplier)
         };
     }
 }

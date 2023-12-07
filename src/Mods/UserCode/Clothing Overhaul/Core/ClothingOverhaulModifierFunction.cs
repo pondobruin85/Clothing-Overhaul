@@ -31,7 +31,7 @@ namespace ClothingOverhaul
         public float CalculateModifier(User user)
         {
             float builtInBaseMovementSpeed = 3.3f;
-            float movespeedRatio = 0.6f;
+            float movespeedRatio = 0.5f;
             try
             {            
                 float moveSpeedModifierSum = ClothingOverhaulMoveSpeedModifierCalcUtil.GetMovementSpeedModifierByBlockType(user);

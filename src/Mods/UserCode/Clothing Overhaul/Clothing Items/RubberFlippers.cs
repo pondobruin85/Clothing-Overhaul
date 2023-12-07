@@ -59,7 +59,7 @@ namespace Eco.Mods.TechTree
             { typeof(DirtBlock),                    2.0f          },  //  Dirt Blocks
             { typeof(ClayBlock),                    2.0f          },  //  Clay Blocks   
             { typeof(MudBlock),                     2.0f          },  //  Mud Blocks    
-            { typeof(SandBlock),                    2.0f     /0.8f},  //  Sand Blocks    (0.8 Is Eco's built in Efficiency Multiplier)            
+            { typeof(SandBlock),                    2.0f          },  //  Sand Blocks    (0.8 Is Eco's built in Efficiency Multiplier)            
             { typeof(CompostBlock),                 2.0f          },  //  Compost Blocks
             { typeof(GarbageBlock),                 2.0f          },  //  Garbage Blocks
             { typeof(SewageBlock),                  2.0f          },  //  Sewage Blocks            
@@ -68,8 +68,8 @@ namespace Eco.Mods.TechTree
             { typeof(WaterBlock),                  10.0f          },  //  Water Blocks
             { typeof(DirtRampBlock),                2.0f          },  //  Dirt Ramp Blocks
             { typeof(DirtRoadBlock),                2.0f          },  //  Dirt Road Blocks            
-            { typeof(StoneRoadCubeBlock),           2.0f     /1.1f},  //  Stone Roads    (1.1 Is Eco's built in Efficiency Multiplier)
-            { typeof(AsphaltConcreteCubeBlock),     2.0f     /1.2f},  //  Asphalt Roads  (1.2 Is Eco's built in Efficiency Multiplier)
+            { typeof(StoneRoadCubeBlock),           2.0f          },  //  Stone Roads    (1.1 Is Eco's built in Efficiency Multiplier)
+            { typeof(AsphaltConcreteCubeBlock),     2.0f          },  //  Asphalt Roads  (1.2 Is Eco's built in Efficiency Multiplier)
         };
     }
     
