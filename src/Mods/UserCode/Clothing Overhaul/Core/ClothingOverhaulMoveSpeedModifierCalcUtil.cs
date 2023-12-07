@@ -39,7 +39,7 @@ namespace ClothingOverhaul
         public static Block GetBlockAffectingUserMovement(User user)
         {
             Block blockAtPlayer = Eco.World.World.GetBlock(user.Position.XYZi());
-            if (blockAtPlayer.GetType() == typeof(EmptyBlock) || blockAtPlayer.GetType() == typeof(PlantBlock))
+            if (blockAtPlayer is EmptyBlock || blockAtPlayer is PlantBlock)
             {
                 blockAtPlayer = Eco.World.World.GetBlock(user.Position.XYZi() - new Vector3i(0, 1, 0));
             }
