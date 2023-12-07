@@ -46,8 +46,7 @@ namespace ClothingOverhaul
         }
         private static Type GetBlockTypeAffectingUserMovement(Block blockAtPlayer)
         {            
-            Type blockAtPlayerBlockType = typeof(HewnLogCubeBlock);
-            
+            Type blockAtPlayerBlockType = typeof(HewnLogCubeBlock);            
             if (blockAtPlayer is DirtBlock) { return typeof(DirtBlock); }                                               // Any blocks that inherit from Dirt Block become Dirt Block to reduce dictionary entries..
             if (blockAtPlayer is IWaterBlock) { return typeof(WaterBlock); }                                            // Water Blocks become water blocks.
             if (blockAtPlayer is PlantBlock) { return typeof(SandBlock); }                                              // All Plant blocks become sand blocks.
