@@ -36,7 +36,9 @@ namespace ClothingOverhaul
         {
             float moveSpeedModifierSum = 0;
             bool isWearingShoeItem = false;
-            Block blockUnderPlayer = Eco.World.World.GetBlock((user.Position.XYZi() - new Vector3i(0, 1, 0)));                                  // Get the block under the player by subracting 1 from the Y Axis.
+            Block blockUnderPlayer = Eco.World.World.GetBlock(user.Position.XYZi());                                                          // Block at players legs (mostly ramps).
+            if (blockUnderPlayer.GetType() == typeof(EmptyBlock))
+            { blockUnderPlayer = Eco.World.World.GetBlock(user.Position.XYZi() - new Vector3i(0,1,0)); }                                        // If no block at player legs, get ramp below.
             Type blockUnderPlayerBlockType = blockUnderPlayer.GetType();
 
             if (blockUnderPlayer is IWaterBlock) { blockUnderPlayerBlockType = typeof(WaterBlock); }                                            // Water Blocks become water blocks.

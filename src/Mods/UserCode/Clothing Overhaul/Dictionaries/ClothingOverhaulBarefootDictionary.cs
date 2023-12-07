@@ -32,24 +32,24 @@ namespace ClothingOverhaul
     {
         public Dictionary<Type, float> BlockMovespeedModifiers { get; } = new Dictionary<Type, float>()
         {
-            { typeof(HewnLogCubeBlock),             2.0f          },  //  Hewn Log Blocks / Default Modifier 
-            { typeof(BasaltBlock),                  2.0f          },  //  Solid Rock Type Blocks      
-            { typeof(CrushedBasaltBlock),           1.0f          },  //  Crushed Type Blocks
-            { typeof(TailingsBlock),                1.0f          },  //  Tailings Blocks
-            { typeof(DirtBlock),                    2.0f          },  //  Dirt Blocks
-            { typeof(ClayBlock),                    1.5f          },  //  Clay Blocks   
-            { typeof(MudBlock),                     1.5f          },  //  Mud Blocks    
-            { typeof(SandBlock),                    1.0f          },  //  Sand Blocks    (0.8 Is Eco's built in Efficiency Multiplier)            
-            { typeof(CompostBlock),                 1.0f          },  //  Compost Blocks
-            { typeof(GarbageBlock),                 1.0f          },  //  Garbage Blocks
-            { typeof(SewageBlock),                  1.0f          },  //  Sewage Blocks            
-            { typeof(WetTailingsBlock),             1.0f          },  //  WetTailing Blocks            
+            { typeof(HewnLogCubeBlock),             0.0f          },  //  Hewn Log Blocks / Default Modifier 
+            { typeof(BasaltBlock),                  0.0f          },  //  Solid Rock Type Blocks      
+            { typeof(CrushedBasaltBlock),          -0.2f          },  //  Crushed Type Blocks
+            { typeof(TailingsBlock),               -0.2f          },  //  Tailings Blocks
+            { typeof(DirtBlock),                    0.0f          },  //  Dirt Blocks
+            { typeof(ClayBlock),                   -0.1f          },  //  Clay Blocks   
+            { typeof(MudBlock),                    -0.1f          },  //  Mud Blocks    
+            { typeof(SandBlock),                  -0.15f      /.8f},  //  Sand Blocks        (0.8 Is Eco's built in Efficiency Multiplier)            
+            { typeof(CompostBlock),               -0.15f          },  //  Compost Blocks
+            { typeof(GarbageBlock),               -0.15f          },  //  Garbage Blocks
+            { typeof(SewageBlock),                -0.15f          },  //  Sewage Blocks            
+            { typeof(WetTailingsBlock),           -0.15f          },  //  WetTailing Blocks            
             { typeof(CottonCarpetBlock),           10.0f          },  //  Carpet Blocks
-            { typeof(WaterBlock),                   3.0f          },  //  Water Blocks
-            { typeof(DirtRampBlock),                3.0f          },  //  Dirt Ramp Blocks
-            { typeof(DirtRoadBlock),                3.0f          },  //  Dirt Road Blocks            
-            { typeof(StoneRoadCubeBlock),           3.5f          },  //  Stone Roads    (1.1 Is Eco's built in Efficiency Multiplier)
-            { typeof(AsphaltConcreteCubeBlock),     4.0f          },  //  Asphalt Roads  (1.2 Is Eco's built in Efficiency Multiplier)
+            { typeof(WaterBlock),                   2.0f          },  //  Water Blocks
+            { typeof(DirtRampBlock),                2.0f    /1.05f},  //  Dirt Ramp Blocks   (1.05 Modded efficiency)  
+            { typeof(DirtRoadBlock),                2.0f    /1.05f},  //  Dirt Road Blocks   (1.05 Modded efficiency)         
+            { typeof(StoneRoadCubeBlock),           2.5f     /1.1f},  //  Stone Roads        (1.1 Is Eco's built in Efficiency Multiplier)
+            { typeof(AsphaltConcreteCubeBlock),     3.0f     /1.2f},  //  Asphalt Roads      (1.2 Is Eco's built in Efficiency Multiplier)
         };
     }
 }
