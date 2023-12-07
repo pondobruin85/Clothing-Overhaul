@@ -25,7 +25,6 @@ using Eco.Simulation;
 using System;
 using System.Collections.Generic;
 
-
 namespace ClothingOverhaul
 {
     public class ClothingBasedStatModifiersRegister

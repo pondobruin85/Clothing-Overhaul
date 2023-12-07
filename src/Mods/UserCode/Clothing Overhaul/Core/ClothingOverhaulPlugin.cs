@@ -32,9 +32,7 @@ namespace ClothingOverhaul
     public partial class ClothingOverhaulPlugin : IModKitPlugin, IInitializablePlugin
     {
         public string GetCategory() => "Mod";
-
         public string GetStatus() => (ClothingOverhaulMod.Any() ? "Loaded Clothing Overhaul:" + string.Concat(ClothingOverhaulMod.Select(overhaul => " " + overhaul.GetType().Name)) : "No Clothing Overhaul loaded");
-
         public List<ILoggedInClothingOverhaul> ClothingOverhaulMod { get; } = new List<ILoggedInClothingOverhaul>();
         public void Initialize(TimedTask timer)
         {

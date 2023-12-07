@@ -1,5 +1,18 @@
-﻿
-
+﻿//Clothing Overhaul
+//Copyright (C) 2023 Seth Reavis
+//
+//This program is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+//
+//This program is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with this program.  If not, see <http://www.gnu.org/licenses/>
 namespace Eco.Mods.TechTree
 {
     using System.Collections.Generic;
@@ -25,16 +38,6 @@ namespace Eco.Mods.TechTree
     using ClothingOverhaul;
     using Eco.World.Blocks;
 
-    /// <summary>
-    /// <para>
-    /// Server side item definition for the "BuilderBoots" clothing item. 
-    /// </para>
-    /// <para>More information about ClothingItem objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.ClothingItem.html</para>
-    /// </summary>
-    /// <remarks>
-    /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
-    /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
-    /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Rubber Flippers")] // Defines the localized name of the item.
     [LocDescription("These flippers allow moving through the water at remarkable speed.")] //The tooltip description for this clothing item.
@@ -44,7 +47,6 @@ namespace Eco.Mods.TechTree
     public partial class RubberFlippersItem :
         ClothingItem , IClothingOverhaulBlockMovespeedDictionary
     {
-
         /// <summary>Slot this clothing type belongs to</summary>
         public override string Slot                     { get { return AvatarAppearanceSlots.Shoes; } }
 
@@ -52,36 +54,20 @@ namespace Eco.Mods.TechTree
 
         public Dictionary<Type, float> BlockMovespeedModifiers { get; } = new Dictionary<Type, float>()
         {
-            { typeof(HewnLogCubeBlock),             2.0f          },  //  Hewn Log Blocks / Default Modifier 
-            { typeof(BasaltBlock),                  2.0f          },  //  Solid Rock Type Blocks      
-            { typeof(CrushedBasaltBlock),           2.0f          },  //  Crushed Type Blocks
-            { typeof(TailingsBlock),                2.0f          },  //  Tailings Blocks
-            { typeof(DirtBlock),                    2.0f          },  //  Dirt Blocks
-            { typeof(ClayBlock),                    2.0f          },  //  Clay Blocks   
-            { typeof(MudBlock),                     2.0f          },  //  Mud Blocks    
-            { typeof(SandBlock),                    2.0f          },  //  Sand Blocks    (0.8 Is Eco's built in Efficiency Multiplier)            
-            { typeof(CompostBlock),                 2.0f          },  //  Compost Blocks
-            { typeof(GarbageBlock),                 2.0f          },  //  Garbage Blocks
-            { typeof(SewageBlock),                  2.0f          },  //  Sewage Blocks            
-            { typeof(WetTailingsBlock),             2.0f          },  //  WetTailing Blocks            
-            { typeof(CottonCarpetBlock),            2.0f          },  //  Carpet Blocks
-            { typeof(WaterBlock),                  10.0f          },  //  Water Blocks
-            { typeof(DirtRampBlock),                2.0f          },  //  Dirt Ramp Blocks
-            { typeof(DirtRoadBlock),                2.0f          },  //  Dirt Road Blocks            
-            { typeof(StoneRoadCubeBlock),           2.0f          },  //  Stone Roads    (1.1 Is Eco's built in Efficiency Multiplier)
-            { typeof(AsphaltConcreteCubeBlock),     2.0f          },  //  Asphalt Roads  (1.2 Is Eco's built in Efficiency Multiplier)
+            { typeof(HewnLogCubeBlock),            2.0f },  //  Hewn Log Blocks / Default Modifier
+            { typeof(DirtBlock),                   2.0f },  //  Dirt Blocks                                                            
+            { typeof(BasaltBlock),                 2.0f },  //  Solid Rock Type Blocks      
+            { typeof(DirtRoadBlock),               2.0f },  //  Dirt Road Blocks            
+            { typeof(StoneRoadCubeBlock),          2.0f },  //  Stone Roads    
+            { typeof(AsphaltConcreteCubeBlock),    2.0f },  //  Asphalt Roads  
+            { typeof(CrushedBasaltBlock),          2.0f },  //  Crushed Type Blocks            
+            { typeof(ClayBlock),                   2.0f },  //  Clay Blocks            
+            { typeof(SandBlock),                   2.0f },  //  Sand Blocks   
+            { typeof(CottonCarpetBlock),           2.0f },  //  Carpet Blocks
+            { typeof(WaterBlock),                  10.0f },  //  Water Blocks            
         };
     }
     
-
-    /// <summary>
-    /// <para>Server side recipe definition for "BuilderBoots".</para>
-    /// <para>More information about RecipeFamily objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.RecipeFamily.html</para>
-    /// </summary>
-    /// <remarks>
-    /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
-    /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
-    /// </remarks>
     [RequiresSkill(typeof(TailoringSkill), 5)]
     public partial class RubberFlippersRecipe : RecipeFamily
     {

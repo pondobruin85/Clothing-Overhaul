@@ -20,8 +20,7 @@ namespace ClothingOverhaul
 {
     public abstract class ClothingOverhaulBase : ILoggedInClothingOverhaul
     {        
-        public virtual IClothingOverhaulModifierFunction ClothingOverhaulModifierFunction { get; protected set; }
-      
+        public virtual IClothingOverhaulModifierFunction ClothingOverhaulModifierFunction { get; protected set; }      
         public abstract void ApplyClothingOverhaulToUser(User user);
         public abstract void RemoveClothingOverhaulFromUser(User user);
     }

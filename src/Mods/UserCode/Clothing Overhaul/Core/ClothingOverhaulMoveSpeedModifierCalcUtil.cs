@@ -51,6 +51,11 @@ namespace ClothingOverhaul
             if (blockAtPlayer is IWaterBlock) { return typeof(WaterBlock); }                                            // Water Blocks become water blocks.
             if (blockAtPlayer is PlantBlock) { return typeof(SandBlock); }                                              // All Plant blocks become sand blocks.
             if (blockAtPlayer is TreeDebrisBlock) { return typeof(SandBlock); }                                         // Tree Debris also treated like Sand.
+            if (blockAtPlayer is TailingsBlock) { return typeof(CrushedBasaltBlock); }                                  // Tailings treated as Crushed Basalt.
+            if (blockAtPlayer is CompostBlock) { return typeof(SandBlock); }                                            // Compost blocks treated as Sand.
+            if (blockAtPlayer is SewageBlock) { return typeof(SandBlock); }                                             // Sewage Blocks treated as Sand Blocks.
+            if (blockAtPlayer is WetTailingsBlock) { return typeof(SandBlock); }                                        // Wet Tailiings treated as Sand.
+            if (blockAtPlayer is MudBlock) { return typeof(ClayBlock); }                                                // Mud treated as Clay.
             if (blockAtPlayer.ToString().Contains("AsphaltConcrete")) { return typeof(AsphaltConcreteCubeBlock); }      // Any blocks with "AsphaltConcrete" in the name become AsphaltConcreteCubeBlock to reduce dictionary entries.
             if (blockAtPlayer.ToString().Contains("StoneRoad")) { return typeof(StoneRoadCubeBlock); }                  // Any blocks with "StoneRoad" in the name become StoneRoadCubeBlock to reduce dictionary entries.
             if (blockAtPlayer.ToString().Contains("DirtRamp")) { return typeof(DirtRoadBlock); }                        // Any blocks with "DirtRamp" in the name become DirtRoadBlock to reduce dictionary entries.
@@ -96,7 +101,6 @@ namespace ClothingOverhaul
                 return playerBlockType.GetRoadEfficiency();
             }
             else return playerBlock.Get<MoveEfficiency>()?.Efficiency ?? 1f;
-
         }
         public static float GetMovementSpeedModifier(User user)
         {
