@@ -38,7 +38,6 @@ namespace ClothingOverhaul
             bool isWearingShoeItem = false;
             Block blockUnderPlayer = Eco.World.World.GetBlock((user.Position.XYZi() - new Vector3i(0, 1, 0)));                                  // Get the block under the player by subracting 1 from the Y Axis.
             Type blockUnderPlayerBlockType = blockUnderPlayer.GetType();
-            float swimSpeedmulti = user.SwimSpeedMultiplier;
 
             if (blockUnderPlayer is IWaterBlock) { blockUnderPlayerBlockType = typeof(WaterBlock); }                                            // Water Blocks become water blocks.
             if (blockUnderPlayer.ToString().Contains("Crushed")) { blockUnderPlayerBlockType = typeof(CrushedBasaltBlock); }                    // Any blocks with "Crushed" in the name become CrushedBasaltBlock to reduce dictionary entries.
@@ -63,10 +62,6 @@ namespace ClothingOverhaul
                 {
                     if (movespeedClothing.BlockMovespeedModifiers.ContainsKey(blockUnderPlayerBlockType))
                     {
-                        if (blockUnderPlayerBlockType == typeof(WaterBlock))
-                        {
-                            swimSpeedmulti = movespeedClothing.BlockMovespeedModifiers[blockUnderPlayerBlockType] * .5f;
-                        }
                         moveSpeedModifierSum += movespeedClothing.BlockMovespeedModifiers[blockUnderPlayerBlockType];                           // Get the value for the block modifier from the clothing item's dictionary and add it to the modifier value.
                     }
                     else
