@@ -67,7 +67,7 @@ namespace ClothingOverhaul
             { if (blockAtPlayerTagNames.Contains("Minable")) { return typeof(BasaltBlock); } }                          // Any blocks with "Minable" Tag become BasaltBlock to reduce dictionary entries.
             return blockAtPlayerBlockType;
         }
-        private static float FindSumOfMoveSpeedBonuses(User user, Type blockType)
+        public static float FindSumOfMoveSpeedBonuses(User user, Type blockType)
         {
             float moveSpeedModifierSum = 0;
             bool isWearingShoeItem = false;
