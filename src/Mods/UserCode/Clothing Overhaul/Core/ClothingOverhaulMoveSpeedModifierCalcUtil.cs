@@ -36,7 +36,7 @@ namespace ClothingOverhaul
 {
     public sealed class ClothingOverhaulMoveSpeedModifierCalcUtil
     {
-        private static Block GetBlockAffectingUserMovement(User user)
+        public static Block GetBlockAffectingUserMovement(User user)
         {
             Block blockAtPlayer = Eco.World.World.GetBlock(user.Position.XYZi());
             if (blockAtPlayer.GetType() == typeof(EmptyBlock) || blockAtPlayer.GetType() == typeof(PlantBlock))
