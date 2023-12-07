@@ -19,6 +19,7 @@ using Eco.Gameplay.Plants;
 using Eco.Gameplay.Players;
 using Eco.Gameplay.Property;
 using Eco.ModKit.Internal;
+using Eco.Mods.Organisms;
 using Eco.Mods.TechTree;
 using Eco.Shared.Gameplay;
 using Eco.Shared.Localization;
@@ -38,7 +39,7 @@ namespace ClothingOverhaul
         private static Block GetBlockAffectingUserMovement(User user)
         {
             Block blockAtPlayer = Eco.World.World.GetBlock(user.Position.XYZi());
-            if (blockAtPlayer.GetType() == typeof(EmptyBlock))
+            if (blockAtPlayer.GetType() == typeof(EmptyBlock) || blockAtPlayer.GetType() == typeof(PlantBlock))
             {
                 blockAtPlayer = Eco.World.World.GetBlock(user.Position.XYZi() - new Vector3i(0, 1, 0));
             }
@@ -50,8 +51,7 @@ namespace ClothingOverhaul
             if (blockAtPlayer is DirtRoadBlock) { return typeof(DirtRoadBlock); }                                       // Return Dirt Roads first because they are also dirt blocks.
             if (blockAtPlayer is DirtBlock) { return typeof(DirtBlock); }                                               // Any blocks that inherit from Dirt Block become Dirt Block to reduce dictionary entries..
             if (blockAtPlayer is IWaterBlock) { return typeof(WaterBlock); }                                            // Water Blocks become water blocks.
-            if (blockAtPlayer is PlantBlock) { return typeof(SandBlock); }                                              // All Plant blocks become sand blocks.
-            if (blockAtPlayer is TreeDebrisBlock) { return typeof(SandBlock); }                                         // Tree Debris also treated like Sand.
+            if (blockAtPlayer is TreeDebrisBlock) { return typeof(TreeDebrisBlock); }                                   // Tree Debris also treated like Sand.
             if (blockAtPlayer is TailingsBlock) { return typeof(CrushedBasaltBlock); }                                  // Tailings treated as Crushed Basalt.
             if (blockAtPlayer is CompostBlock) { return typeof(SandBlock); }                                            // Compost blocks treated as Sand.
             if (blockAtPlayer is SewageBlock) { return typeof(SandBlock); }                                             // Sewage Blocks treated as Sand Blocks.

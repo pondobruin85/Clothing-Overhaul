@@ -43,6 +43,7 @@ namespace ClothingOverhaul
             { typeof(SandBlock),                 -0.15f },  //  Sand Blocks   
             { typeof(CottonCarpetBlock),          10.0f },  //  Carpet Blocks
             { typeof(WaterBlock),                  3.0f },  //  Water Blocks            
+            { typeof(TreeDebris),                 -0.5f },  //  Tree Debris   
         };
     }
 }
