@@ -54,12 +54,6 @@ namespace ClothingOverhaul
                 user.Subscribe("Position", callbackToUpdateStat);
                 ClothingOverhaulListeners.Add((user, statType), callbackToUpdateStat);
                 callbackToUpdateStat();
-
-                if (Eco.World.World.GetBlock(user.Position.XYZi()).ToString().Contains("Water")){
-
-                    user.SwimSpeedMultiplier = .1f;
-
-                }
             }
         }
         public virtual void RemoveClothingOverhaulFromUser(User user, UserStatType statType) { }
