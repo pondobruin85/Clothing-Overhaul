@@ -54,18 +54,17 @@ namespace Eco.Mods.TechTree
 
         public Dictionary<Type, float> BlockMovespeedModifiers { get; } = new Dictionary<Type, float>()
         {
-            { typeof(HewnLogCubeBlock),            1.0f },  //  Hewn Log Blocks / Default Modifier
-            { typeof(DirtBlock),                   1.0f },  //  Dirt Blocks                                                            
-            { typeof(BasaltBlock),                 1.0f },  //  Solid Rock Type Blocks      
-            { typeof(DirtRoadBlock),               1.0f },  //  Dirt Road Blocks            
-            { typeof(StoneRoadCubeBlock),          1.0f },  //  Stone Roads    
-            { typeof(AsphaltConcreteCubeBlock),    1.0f },  //  Asphalt Roads  
-            { typeof(CrushedBasaltBlock),          1.0f },  //  Crushed Type Blocks            
-            { typeof(ClayBlock),                   1.0f },  //  Clay Blocks            
-            { typeof(SandBlock),                   1.0f },  //  Sand Blocks   
-            { typeof(CottonCarpetBlock),           1.0f },  //  Carpet Blocks
+            { typeof(HewnLogCubeBlock),           -1.0f },  //  Hewn Log Blocks / Default Modifier
+            { typeof(DirtBlock),                  -1.0f },  //  Dirt Blocks                                                            
+            { typeof(BasaltBlock),                -1.0f },  //  Solid Rock Type Blocks      
+            { typeof(DirtRoadBlock),              -1.0f },  //  Dirt Road Blocks            
+            { typeof(StoneRoadCubeBlock),         -1.0f },  //  Stone Roads    
+            { typeof(AsphaltConcreteCubeBlock),   -1.0f },  //  Asphalt Roads  
+            { typeof(CrushedBasaltBlock),         -1.0f },  //  Crushed Type Blocks            
+            { typeof(ClayBlock),                  -1.0f },  //  Clay Blocks            
+            { typeof(SandBlock),                   0.5f },  //  Sand Blocks   
+            { typeof(CottonCarpetBlock),          -1.0f },  //  Carpet Blocks
             { typeof(WaterBlock),                  7.0f },  //  Water Blocks            
-            { typeof(TreeDebris),                 -0.5f },  //  Tree Debris  
         };
 
 
