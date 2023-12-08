@@ -45,7 +45,7 @@ namespace ClothingOverhaul
             }
             return blockAtPlayer;
         }
-        private static Type GetBlockTypeAffectingUserMovement(Block blockAtPlayer)
+        public static Type GetBlockTypeAffectingUserMovement(Block blockAtPlayer)
         {         
             Type blockAtPlayerBlockType = typeof(HewnLogCubeBlock);            
             if (blockAtPlayer is DirtRoadBlock) { return typeof(DirtRoadBlock); }                                       // Return Dirt Roads first because they are also dirt blocks.
