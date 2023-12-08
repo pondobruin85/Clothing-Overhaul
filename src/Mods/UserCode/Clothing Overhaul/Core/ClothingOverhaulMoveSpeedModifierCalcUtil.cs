@@ -39,7 +39,7 @@ namespace ClothingOverhaul
         public static Block GetBlockAffectingUserMovement(User user)
         {
             Block blockAtPlayer = Eco.World.World.GetBlock(user.Position.XYZi());
-            if (blockAtPlayer is EmptyBlock || blockAtPlayer is PlantBlock)
+            if (blockAtPlayer is EmptyBlock || blockAtPlayer is PlantBlock || blockAtPlayer is TreeDebrisBlock)
             {
                 blockAtPlayer = Eco.World.World.GetBlock(user.Position.XYZi() - new Vector3i(0, 1, 0));
             }
@@ -51,7 +51,6 @@ namespace ClothingOverhaul
             if (blockAtPlayer is DirtRoadBlock) { return typeof(DirtRoadBlock); }                                       // Return Dirt Roads first because they are also dirt blocks.
             if (blockAtPlayer is DirtBlock) { return typeof(DirtBlock); }                                               // Any blocks that inherit from Dirt Block become Dirt Block to reduce dictionary entries..
             if (blockAtPlayer is IWaterBlock) { return typeof(WaterBlock); }                                            // Water Blocks become water blocks.
-            if (blockAtPlayer is TreeDebrisBlock) { return typeof(TreeDebrisBlock); }                                   // Tree Debris also treated like Sand.
             if (blockAtPlayer is TailingsBlock) { return typeof(CrushedBasaltBlock); }                                  // Tailings treated as Crushed Basalt.
             if (blockAtPlayer is CompostBlock) { return typeof(SandBlock); }                                            // Compost blocks treated as Sand.
             if (blockAtPlayer is SewageBlock) { return typeof(SandBlock); }                                             // Sewage Blocks treated as Sand Blocks.
@@ -111,7 +110,7 @@ namespace ClothingOverhaul
             float baseMoveSpeedReduction = 1.8f;                                                                    // conversion bonus converts 0-10 scale into 0-7 scale.  This is added to
             float conversionMultiplier = 0.7f;                                                                      // base move speed, which is 3.3. Then we subract 1.8, giving us a 1.5-8.5 
                                                                                                                     // scale (8.5 is needed bonus for max diagonal walking speed on asphalt roads.
-            return ((conversionMultiplier * sumOfMoveSpeedBonuses) - baseMoveSpeedReduction);  
+            return (conversionMultiplier * sumOfMoveSpeedBonuses - baseMoveSpeedReduction) / MathF.Sqrt(blockEfficiencyBonus); 
         }
     }           
 }
