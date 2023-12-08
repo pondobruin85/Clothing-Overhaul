@@ -106,11 +106,14 @@ namespace ClothingOverhaul
             Block playerBlock = GetBlockAffectingUserMovement(user);
             Type playerBlockType = GetBlockTypeAffectingUserMovement(playerBlock);            
             float sumOfMoveSpeedBonuses = FindSumOfMoveSpeedBonuses(user, playerBlockType);
-            float blockEfficiencyBonus = GetBlockEfficiencyBonus(playerBlock, playerBlockType);
+            float blockEfficiencyBonus = MathF.Sqrt(GetBlockEfficiencyBonus(playerBlock, playerBlockType));
             float baseMoveSpeedReduction = 1.8f;                                                                    // conversion bonus converts 0-10 scale into 0-7 scale.  This is added to
+            float baseMoveSpeed = 1.5f;
             float conversionMultiplier = 0.7f;                                                                      // base move speed, which is 3.3. Then we subract 1.8, giving us a 1.5-8.5 
                                                                                                                     // scale (8.5 is needed bonus for max diagonal walking speed on asphalt roads.
-            return (conversionMultiplier * sumOfMoveSpeedBonuses - baseMoveSpeedReduction) / MathF.Sqrt(blockEfficiencyBonus); 
+            
+            
+            return ((conversionMultiplier * sumOfMoveSpeedBonuses - baseMoveSpeedReduction) / blockEfficiencyBonus) + (baseMoveSpeed - baseMoveSpeed * blockEfficiencyBonus) ; 
         }
     }           
 }
