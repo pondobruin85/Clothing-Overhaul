@@ -37,7 +37,7 @@ namespace ClothingOverhaul
             { typeof(BasaltBlock),                 0.0f },  //  Solid Rock Type Blocks      
             { typeof(DirtRoadBlock),               2.0f },  //  Dirt Road Blocks            
             { typeof(StoneRoadCubeBlock),          2.5f },  //  Stone Roads    
-            { typeof(AsphaltConcreteCubeBlock),    3.0f },  //  Asphalt Roads  
+            { typeof(AsphaltConcreteCubeBlock),    2.57f },  //  Asphalt Roads  
             { typeof(CrushedBasaltBlock),         -0.2f },  //  Crushed Type Blocks            
             { typeof(ClayBlock),                  -0.1f },  //  Clay Blocks            
             { typeof(SandBlock),                 -0.15f },  //  Sand Blocks   
