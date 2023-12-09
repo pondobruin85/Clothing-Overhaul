@@ -25,20 +25,20 @@ using System;
 namespace ClothingOverhaul
 {
     [Benefit]
-    public partial class ClothingOverhaulCalorieRate : ClothingOverhaulBase
+    public partial class PlayerMovement : ClothingOverhaulBase
     {
-        protected virtual ClothingBasedStatModifiersRegister ClothingModifiersRegister { get; } = new ClothingBasedStatModifiersRegister();
+        protected virtual StatModifiersRegister ClothingModifiersRegister { get; } = new StatModifiersRegister();
 
-        public ClothingOverhaulCalorieRate()
+        public PlayerMovement()
         {           
-            ClothingOverhaulModifierFunction = new ClothingOverhaulCalorieRateFunction();     
+            ModifierFunction = new MovementFunction();     
         }
         public override void ApplyClothingOverhaulToUser(User user)
         {  
-            IDynamicValue modifier = new ClothingOverhaulDynamicValue (ClothingOverhaulModifierFunction);
+            IDynamicValue modifier = new ModifierDynamicValue (ModifierFunction);
 
             Action updatePlayerLocation = user.ChangedMovementSpeed;
-            ClothingModifiersRegister.AddModifierToUser(user, UserStatType.CalorieRate, modifier, updatePlayerLocation);
+            ClothingModifiersRegister.AddModifierToUser(user, UserStatType.MovementSpeed, modifier, updatePlayerLocation);
         }
         public override void RemoveClothingOverhaulFromUser(User user)
         {

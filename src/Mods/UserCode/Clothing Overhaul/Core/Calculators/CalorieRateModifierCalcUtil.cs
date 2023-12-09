@@ -34,7 +34,7 @@ using User = Eco.Gameplay.Players.User;
 
 namespace ClothingOverhaul
 {
-    public sealed class ClothingOverhaulCalorieRateModifierCalcUtil
+    public sealed class CalorieRateModifierCalcUtil
     {
         
         public static float GetCalorieRateModifier(User user)

@@ -17,7 +17,7 @@ using Eco.Gameplay.Players;
 
 namespace ClothingOverhaul
 {
-    public interface IClothingOverhaulModifierFunction
+    public interface IModifierFunction
     {
         public float CalculateModifier(User user);
     }

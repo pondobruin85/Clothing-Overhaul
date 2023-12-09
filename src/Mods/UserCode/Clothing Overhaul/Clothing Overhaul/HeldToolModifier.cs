@@ -13,31 +13,35 @@
 //
 //You should have received a copy of the GNU General Public License
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
+using ClothingOverhaul;
 using Eco.Gameplay.DynamicValues;
 using Eco.Gameplay.Players;
+using Eco.Shared.Localization;
+using Eco.Shared.Math;
+using Eco.Shared.Utils;
+using Eco.Simulation;
 using System;
 
 namespace ClothingOverhaul
 {
-    public class ClothingOverhaulDynamicValue : IDynamicValue
+    [Benefit]
+    public partial class HeldToolModifier : ClothingOverhaulBase
     {
-        public float GetBaseValue => 0f;
-        public ref int ControllerID => ref id;
-        private int id;
-        public IClothingOverhaulModifierFunction ClothingModifierFunction { get; }
+        protected virtual StatModifiersRegister ToolModifiersRegister { get; } = new StatModifiersRegister();
 
-        public ClothingOverhaulDynamicValue(IClothingOverhaulModifierFunction clothingOverhaulModifierFunction)
-        {
-            ClothingModifierFunction = clothingOverhaulModifierFunction;
+        public HeldToolModifier()
+        {           
+            ModifierFunction = new ToolFunction();
         }
-        public float GetCurrentValue(IDynamicValueContext context, object obj)
-        {
-            User user = context.User;
-            return ClothingModifierFunction.CalculateModifier(user);
+        public override void ApplyClothingOverhaulToUser(User user)
+        {  
+            IDynamicValue modifier = new ModifierDynamicValue (ModifierFunction);
+
+            Action updatePlayerLocation = user.ChangedMovementSpeed;
+            ToolModifiersRegister.AddModifierToUser(user, UserStatType.DetectionRange, modifier, updatePlayerLocation);
         }
-        public int GetCurrentValueInt(IDynamicValueContext context, object obj, float multiplier)
+        public override void RemoveClothingOverhaulFromUser(User user)
         {
-            return (int)(GetCurrentValue(context, obj) * multiplier);
         }
     }
 }

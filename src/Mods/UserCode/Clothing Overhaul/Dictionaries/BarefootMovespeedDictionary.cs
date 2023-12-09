@@ -28,7 +28,7 @@ using System.Collections.Generic;
 
 namespace ClothingOverhaul
 {
-    public partial class ClothingOverhaulBarefootDictionary : IClothingOverhaulBlockMovespeedDictionary
+    public partial class BarefootMovespeedDictionary : IClothingOverhaulBlockMovespeedDictionary
     {
         public Dictionary<Type, float> BlockMovespeedModifiers { get; } = new Dictionary<Type, float>()
         {

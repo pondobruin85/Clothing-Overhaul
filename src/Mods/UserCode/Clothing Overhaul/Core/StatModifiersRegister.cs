@@ -27,7 +27,7 @@ using System.Collections.Generic;
 
 namespace ClothingOverhaul
 {
-    public class ClothingBasedStatModifiersRegister
+    public class StatModifiersRegister
     {
         /// <summary>
         /// Stores the skill rate change listeners

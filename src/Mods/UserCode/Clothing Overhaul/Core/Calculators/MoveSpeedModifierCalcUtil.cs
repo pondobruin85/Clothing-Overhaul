@@ -34,7 +34,7 @@ using User = Eco.Gameplay.Players.User;
 
 namespace ClothingOverhaul
 {
-    public sealed class ClothingOverhaulMoveSpeedModifierCalcUtil
+    public sealed class MoveSpeedModifierCalcUtil
     {
         public static Block GetBlockAffectingUserMovement(User user)
         {
@@ -87,7 +87,7 @@ namespace ClothingOverhaul
             }
             if (!isWearingShoeItem)
             {
-                ClothingOverhaulBarefootDictionary BarefootDictionary = new ClothingOverhaulBarefootDictionary();
+                BarefootMovespeedDictionary BarefootDictionary = new BarefootMovespeedDictionary();
                 moveSpeedModifierSum += BarefootDictionary.BlockMovespeedModifiers[blockType];                              // Get the value for the block modifier from the clothing item's dictionary and add it to the modifier value.
             }
             return moveSpeedModifierSum;

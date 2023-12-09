@@ -13,15 +13,26 @@
 //
 //You should have received a copy of the GNU General Public License
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using Eco.Gameplay.DynamicValues;
 using Eco.Gameplay.Players;
+using Eco.Mods.TechTree;
+using Eco.Shared.Localization;
+using Eco.Shared.Utils;
+using Eco.Simulation;
+using System;
 
 namespace ClothingOverhaul
 {
-    public abstract class ClothingOverhaulBase : ILoggedInClothingOverhaul
+    public class CalorieRateFunction : IModifierFunction
     {        
-        public virtual IModifierFunction ModifierFunction { get; protected set; }      
-        public abstract void ApplyClothingOverhaulToUser(User user);
-        public abstract void RemoveClothingOverhaulFromUser(User user);
+        public float CalculateModifier(User user)
+        {            
+            try
+            {            
+                float calculatedValue = CalorieRateModifierCalcUtil.GetCalorieRateModifier(user);
+                return calculatedValue;
+            }
+            catch {}
+            return 0;                       
+        }
     }
 }

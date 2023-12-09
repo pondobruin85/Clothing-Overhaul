@@ -22,14 +22,31 @@ using System;
 
 namespace ClothingOverhaul
 {
-    public class ClothingOverhaulCalorieRateFunction : IClothingOverhaulModifierFunction
+    public class ToolFunction : IModifierFunction
     {        
         public float CalculateModifier(User user)
         {            
             try
-            {            
-                float calculatedValue = ClothingOverhaulCalorieRateModifierCalcUtil.GetCalorieRateModifier(user);
-                return calculatedValue;
+            {               
+                if (user.Avatar.HeldItem != null)
+                {
+                    if (user.Avatar.HeldItem.IsTool)
+                    {
+                        switch (user.Avatar.HeldItem.Name)
+                        {
+                            case "":
+                                return 2f;
+                                
+
+                            default:
+                                return 0f;
+                                
+
+
+                        }
+                    }
+                }
+             
             }
             catch {}
             return 0;                       
