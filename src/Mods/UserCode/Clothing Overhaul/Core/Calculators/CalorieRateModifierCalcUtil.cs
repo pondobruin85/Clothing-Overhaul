@@ -60,7 +60,7 @@ namespace ClothingOverhaul
                         {
                             calorieReduction += calorieClothing.MaxCalorieRateBonus;
                         }
-                        if (temperatureAbsoluteDifference <= 0.34f)
+                        if (temperatureAbsoluteDifference > 0.17f && temperatureAbsoluteDifference <= 0.34f)
                         {
                             calorieReduction += calorieClothing.MaxCalorieRateBonus * (.34f - temperatureAbsoluteDifference) / .17f;         //this gives a 0-100% multiplier to the max reduction bonus.
                         }
