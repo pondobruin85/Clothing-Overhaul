@@ -40,45 +40,28 @@ namespace ClothingOverhaul
         public static float GetCalorieRateModifier(User user)
         {
             float userTemp = WorldLayerManager.Obj.ClimateSim.Temperature.AverageOverBoundaryAlignedWorldPos(user.Position.XZi());
+            float calorieReduction = 0f;
+            
+            foreach (ItemStack playerInventoryItem in user.Inventory.Clothing.NonEmptyStacks)                                                   //Go through the player's clothing and sum the movespeed modifiers to moveSpeedModifierSum;
+            {
+                ClothingItem? clothingItem = playerInventoryItem.Item as ClothingItem;
+                IClothingOverhaulCalorieRateFloats? calorieClothing = playerInventoryItem.Item as IClothingOverhaulCalorieRateFloats;
 
-            //foreach (ItemStack playerInventoryItem in user.Inventory.Clothing.NonEmptyStacks)                                                   //Go through the player's clothing and sum the movespeed modifiers to moveSpeedModifierSum;
-            //{
-            //    ClothingItem? clothingItem = playerInventoryItem.Item as ClothingItem;
-            //    IClothingOverhaulBlockMovespeedDictionary? movespeedClothing = playerInventoryItem.Item as IClothingOverhaulBlockMovespeedDictionary;
-
-            //    if (movespeedClothing != null)
-            //    {
-                    
-            //        moveSpeedModifierSum += movespeedClothing.BlockMovespeedModifiers[blockType];                           // Get the value for the block modifier from the clothing item's dictionary and add it to the modifier value.
-            //        if (clothingItem != null && clothingItem.Slot == AvatarAppearanceSlots.Shoes && clothingItem is IClothingOverhaulBlockMovespeedDictionary)
-            //        {
-            //            isWearingShoeItem = true;
-            //        }
-            //    }
-            //}
-
-
-            return 0f;
+                if (clothingItem != null  && calorieClothing is IClothingOverhaulCalorieRateFloats)
+                {
+                    float clothingTemp = calorieClothing.TemperatureValue;
+                    float temperatureAbsoluteDifference = Math.Abs(clothingTemp - userTemp);
+                    if (temperatureAbsoluteDifference <= 0.17f)
+                    {
+                        calorieReduction += calorieClothing.MaxCalorieRateBonus;
+                    }
+                    if (temperatureAbsoluteDifference <= 0.34f)
+                    {
+                        calorieReduction += calorieClothing.MaxCalorieRateBonus * (.34f - temperatureAbsoluteDifference) / .17f;         //this gives a 0-100% multiplier to the max reduction bonus.
+                    }
+                }
+            }
+            return calorieReduction;
         }
     }           
 }
-
-/*
- * 
- * 
-            for each clothing piece = shirt and shoes
-            check value compared - each shirt, pants and hat need a rate (property)?
-            add calorie rate reducers.  shirt gives 20%, pants 20%, hat 10% for proper temps only.  bad value in wrong climate.
-            temp is float 0 to 1.
-            breakpoints are .35, .65.  cold clothes get max value at .35, warm clothes get max value at .65  above .65.  cold clothes provide no benefit.
-            give clothing piece float value, .16, .5, or .84.  |value - temp| = x < .17, full benefit.  .17<x<.34, partial benefit.  x > .34, no benefit.  
-            hat give max -.1. pants -.2, shirt -.2.  so   -.2 
-                
-
- * 
- * 
- * 
- * 
- * 
- * 
- */
