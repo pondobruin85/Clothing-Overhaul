@@ -45,7 +45,6 @@ namespace ClothingOverhaul
 
             foreach (ItemStack playerInventoryItem in user.Inventory.Clothing.NonEmptyStacks)                                                   //Go through the player's clothing and sum the movespeed modifiers to moveSpeedModifierSum;
             {
-
                 if (playerInventoryItem.Item is IClothingOverhaulCalorieRateVars calorieClothing)
                 {
                     if (isSwimming && calorieClothing.IsSwimwear)
