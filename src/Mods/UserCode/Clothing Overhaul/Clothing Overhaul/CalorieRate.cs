@@ -27,7 +27,7 @@ namespace ClothingOverhaul
     [Benefit]
     public partial class CalorieRate : ClothingOverhaulBase
     {
-        protected virtual StatModifiersRegister ClothingModifiersRegister { get; } = new StatModifiersRegister();
+        protected virtual StatModifiersRegister ModifiersRegister { get; } = new StatModifiersRegister();
 
         public CalorieRate()
         {           
@@ -38,7 +38,7 @@ namespace ClothingOverhaul
             IDynamicValue modifier = new ModifierDynamicValue (ModifierFunction);
 
             Action updatePlayerLocation = user.ChangedMovementSpeed;
-            ClothingModifiersRegister.AddModifierToUser(user, UserStatType.CalorieRate, modifier, updatePlayerLocation);
+            ModifiersRegister.AddModifierToUser(user, UserStatType.CalorieRate, modifier, updatePlayerLocation);
         }
         public override void RemoveClothingOverhaulFromUser(User user)
         {

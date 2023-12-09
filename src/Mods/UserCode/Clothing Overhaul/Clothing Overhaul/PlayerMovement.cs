@@ -27,7 +27,7 @@ namespace ClothingOverhaul
     [Benefit]
     public partial class PlayerMovement : ClothingOverhaulBase
     {
-        protected virtual StatModifiersRegister ClothingModifiersRegister { get; } = new StatModifiersRegister();
+        protected virtual StatModifiersRegister ModifiersRegister { get; } = new StatModifiersRegister();
 
         public PlayerMovement()
         {           
@@ -38,7 +38,7 @@ namespace ClothingOverhaul
             IDynamicValue modifier = new ModifierDynamicValue (ModifierFunction);
 
             Action updatePlayerLocation = user.ChangedMovementSpeed;
-            ClothingModifiersRegister.AddModifierToUser(user, UserStatType.MovementSpeed, modifier, updatePlayerLocation);
+            ModifiersRegister.AddModifierToUser(user, UserStatType.MovementSpeed, modifier, updatePlayerLocation);
         }
         public override void RemoveClothingOverhaulFromUser(User user)
         {

@@ -34,19 +34,18 @@ namespace ClothingOverhaul
                     {
                         switch (user.Avatar.HeldItem.Name)
                         {
-                            case "":
+                            case "WoodenBowItem":
+                                return 1f;
+                            case "RecurveBowItem":
                                 return 2f;
-                                
-
+                            case "CompositeBowItem":
+                                return 3f;
                             default:
                                 return 0f;
-                                
-
-
                         }
                     }
                 }
-             
+                return 0f;
             }
             catch {}
             return 0;                       

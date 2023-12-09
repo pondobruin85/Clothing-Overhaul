@@ -27,7 +27,7 @@ namespace ClothingOverhaul
     [Benefit]
     public partial class HeldToolModifier : ClothingOverhaulBase
     {
-        protected virtual StatModifiersRegister ToolModifiersRegister { get; } = new StatModifiersRegister();
+        protected virtual StatModifiersRegister ModifiersRegister { get; } = new StatModifiersRegister();
 
         public HeldToolModifier()
         {           
@@ -38,7 +38,7 @@ namespace ClothingOverhaul
             IDynamicValue modifier = new ModifierDynamicValue (ModifierFunction);
 
             Action updatePlayerLocation = user.ChangedMovementSpeed;
-            ToolModifiersRegister.AddModifierToUser(user, UserStatType.DetectionRange, modifier, updatePlayerLocation);
+            ModifiersRegister.AddModifierToUser(user, UserStatType.DetectionRange, modifier, updatePlayerLocation);
         }
         public override void RemoveClothingOverhaulFromUser(User user)
         {
