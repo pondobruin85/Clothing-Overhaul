@@ -72,14 +72,12 @@ namespace ClothingOverhaul
             bool isWearingShoeItem = false;
 
             foreach (ItemStack playerInventoryItem in user.Inventory.Clothing.NonEmptyStacks)                                                   //Go through the player's clothing and sum the movespeed modifiers to moveSpeedModifierSum;
-            {
-                ClothingItem? clothingItem = playerInventoryItem.Item as ClothingItem;
-                IClothingOverhaulBlockMovespeedDictionary? movespeedClothing = playerInventoryItem.Item as IClothingOverhaulBlockMovespeedDictionary;
-
-                if (movespeedClothing != null)
+            {   
+                if (playerInventoryItem.Item is IClothingOverhaulBlockMovespeedDictionary movespeedClothing)
                 {
                     moveSpeedModifierSum += movespeedClothing.BlockMovespeedModifiers[blockType];                           // Get the value for the block modifier from the clothing item's dictionary and add it to the modifier value.
-                    if (clothingItem != null && clothingItem.Slot == AvatarAppearanceSlots.Shoes && clothingItem is IClothingOverhaulBlockMovespeedDictionary)
+                    
+                    if (playerInventoryItem.Item is ClothingItem shoesItem && shoesItem.Slot == AvatarAppearanceSlots.Shoes)
                     {
                         isWearingShoeItem = true;
                     }

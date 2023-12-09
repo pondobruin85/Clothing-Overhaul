@@ -41,23 +41,29 @@ namespace ClothingOverhaul
         {
             float userTemp = WorldLayerManager.Obj.ClimateSim.Temperature.AverageOverBoundaryAlignedWorldPos(user.Position.XZi());
             float calorieReduction = 0f;
-            
+            bool isSwimming = Eco.World.World.GetBlock(user.Position.XYZi()).IsWater();
+
             foreach (ItemStack playerInventoryItem in user.Inventory.Clothing.NonEmptyStacks)                                                   //Go through the player's clothing and sum the movespeed modifiers to moveSpeedModifierSum;
             {
-                ClothingItem? clothingItem = playerInventoryItem.Item as ClothingItem;
-                IClothingOverhaulCalorieRateFloats? calorieClothing = playerInventoryItem.Item as IClothingOverhaulCalorieRateFloats;
 
-                if (clothingItem != null  && calorieClothing is IClothingOverhaulCalorieRateFloats)
+                if (playerInventoryItem.Item is IClothingOverhaulCalorieRateVars calorieClothing)
                 {
-                    float clothingTemp = calorieClothing.TemperatureValue;
-                    float temperatureAbsoluteDifference = Math.Abs(clothingTemp - userTemp);
-                    if (temperatureAbsoluteDifference <= 0.17f)
+                    if (isSwimming && calorieClothing.IsSwimwear)
                     {
                         calorieReduction += calorieClothing.MaxCalorieRateBonus;
                     }
-                    if (temperatureAbsoluteDifference <= 0.34f)
+                    if (!isSwimming && !calorieClothing.IsSwimwear)
                     {
-                        calorieReduction += calorieClothing.MaxCalorieRateBonus * (.34f - temperatureAbsoluteDifference) / .17f;         //this gives a 0-100% multiplier to the max reduction bonus.
+                        float clothingTemp = calorieClothing.TemperatureValue;
+                        float temperatureAbsoluteDifference = Math.Abs(clothingTemp - userTemp);
+                        if (temperatureAbsoluteDifference <= 0.17f)
+                        {
+                            calorieReduction += calorieClothing.MaxCalorieRateBonus;
+                        }
+                        if (temperatureAbsoluteDifference <= 0.34f)
+                        {
+                            calorieReduction += calorieClothing.MaxCalorieRateBonus * (.34f - temperatureAbsoluteDifference) / .17f;         //this gives a 0-100% multiplier to the max reduction bonus.
+                        }
                     }
                 }
             }

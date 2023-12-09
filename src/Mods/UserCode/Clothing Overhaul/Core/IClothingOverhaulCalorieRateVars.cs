@@ -23,9 +23,10 @@ using System.Collections.Generic;
 
 namespace ClothingOverhaul
 {
-    public interface IClothingOverhaulCalorieRateFloats
+    public interface IClothingOverhaulCalorieRateVars
     {
         public float TemperatureValue { get; }
         public float MaxCalorieRateBonus { get; }
+        public bool IsSwimwear { get; }
     }
 }

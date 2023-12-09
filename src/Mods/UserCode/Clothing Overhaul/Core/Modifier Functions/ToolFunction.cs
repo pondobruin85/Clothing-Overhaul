@@ -23,32 +23,28 @@ using System;
 namespace ClothingOverhaul
 {
     public class ToolFunction : IModifierFunction
-    {        
+    {
         public float CalculateModifier(User user)
-        {            
+        {
             try
-            {               
+            {
                 if (user.Avatar.HeldItem != null)
                 {
-                    if (user.Avatar.HeldItem.IsTool)
+                    switch (user.Avatar.HeldItem)
                     {
-                        switch (user.Avatar.HeldItem.Name)
-                        {
-                            case "WoodenBowItem":
-                                return 1f;
-                            case "RecurveBowItem":
-                                return 2f;
-                            case "CompositeBowItem":
-                                return 3f;
-                            default:
-                                return 0f;
-                        }
+                        case WoodenBowItem:
+                            return 1f;
+                        case RecurveBowItem:
+                            return 2f;
+                        case CompositeBowItem:
+                            return 3f;
+                        default:
+                            return 0f;
                     }
                 }
-                return 0f;
             }
-            catch {}
-            return 0;                       
+            catch { }
+            return 0;
         }
     }
 }

@@ -29,7 +29,7 @@ namespace ClothingOverhaul
             try
             {            
                 float calculatedValue = CalorieRateModifierCalcUtil.GetCalorieRateModifier(user);
-                return calculatedValue;
+                return -calculatedValue;
             }
             catch {}
             return 0;                       
