@@ -18,5 +18,7 @@ Bows now provide detection range reductions when equipped.
 
 This is very much a work in progess.  For any questions, comments, suggestions, please contact me on Eco's discord.  
 An enormous THANK YOU goes to Alpenglow, who, without his help, I would have never been able to create this.  Also thank you to TheKye for his amazing videos, and to the Eco community for being helpful and friendly.  The SLG Devs are also amazing and incredibly helpful, thank you Jens for answering so many questions I had.
+Lastly, thank you to Megan (meggersly), who inspired me to create this, and who is eternally my light in the darkness.
+
 
 ***TO DO*** - update Item names and Descriptions in override files.
