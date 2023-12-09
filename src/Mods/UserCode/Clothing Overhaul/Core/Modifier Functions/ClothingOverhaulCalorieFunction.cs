@@ -22,13 +22,13 @@ using System;
 
 namespace ClothingOverhaul
 {
-    public class ClothingOverhaulModifierFunction : IClothingOverhaulModifierFunction
+    public class ClothingOverhaulCalorieRateFunction : IClothingOverhaulModifierFunction
     {        
         public float CalculateModifier(User user)
         {            
             try
             {            
-                float calculatedValue = ClothingOverhaulMoveSpeedModifierCalcUtil.GetMovementSpeedModifier(user);
+                float calculatedValue = ClothingOverhaulCalorieRateModifierCalcUtil.GetCalorieRateModifier(user);
                 return calculatedValue;
             }
             catch {}
