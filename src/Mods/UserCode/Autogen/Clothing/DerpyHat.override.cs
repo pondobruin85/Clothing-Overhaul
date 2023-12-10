@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Derpy Hat")] // Defines the localized name of the item.
-    [LocDescription("Dorky sombrero that doesn't fit anyone. You feel embarrassed to wear it.")] //The tooltip description for this clothing item.
+    [LocDescription("For anyone who has been Indiana Jones for Halloween 30 years in a row.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the DerpyHat is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

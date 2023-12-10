@@ -39,7 +39,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Builder Boots")] // Defines the localized name of the item.
-    [LocDescription("Snug work boots with side zippers.\n\n(Decreases calories consumed when using tools by 30\u0025)")] //The tooltip description for this clothing item.
+    [LocDescription("Whether you're building a bear or a bob, these work boots decrease calories consumed when using tools by 30\u0025)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the BuilderBoots is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -77,7 +77,7 @@ namespace Eco.Mods.TechTree
     /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [RequiresSkill(typeof(TailoringSkill), 7)]
+    [RequiresSkill(typeof(TailoringSkill), 6)]
     public partial class BuilderBootsRecipe : RecipeFamily
     {
         public BuilderBootsRecipe()

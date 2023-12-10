@@ -38,8 +38,8 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Chef Shoes")] // Defines the localized name of the item.
-    [LocDescription("Anyone can cook, but it takes Chef Shoes to turn an amateur into a professional chef.\n\n(Decreases calories consumed when using tools by 30\u0025)")] //The tooltip description for this clothing item.
+    [LocDisplayName("City Shoes")] // Defines the localized name of the item.
+    [LocDescription("Medium weight, neutral balance running shoe for running on pavement. Wear at your own risk in the water.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ChefShoes is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -77,7 +77,7 @@ namespace Eco.Mods.TechTree
     /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [RequiresSkill(typeof(TailoringSkill), 7)]
+    [RequiresSkill(typeof(TailoringSkill), 6)]
     public partial class ChefShoesRecipe : RecipeFamily
     {
         public ChefShoesRecipe()
@@ -85,7 +85,7 @@ namespace Eco.Mods.TechTree
             var recipe = new Recipe();
             recipe.Init(
                 name: "ChefShoes",  //noloc
-                displayName: Localizer.DoStr("Chef Shoes"),
+                displayName: Localizer.DoStr("City Shoes"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -114,7 +114,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Chef Shoes"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Chef Shoes"), recipeType: typeof(ChefShoesRecipe));
+            this.Initialize(displayText: Localizer.DoStr("City Shoes"), recipeType: typeof(ChefShoesRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

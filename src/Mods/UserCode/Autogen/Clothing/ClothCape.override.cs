@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Cloth Cape")] // Defines the localized name of the item.
-    [LocDescription("Sneak up on unsuspecting prey and look cool while doing it.\\n\\n(Increases move speed by about 10\u0025, but also increases calorie rate by 2\u0025)")] //The tooltip description for this clothing item.
+    [LocDescription("Sneak up on unsuspecting prey and look cool while doing it.\\n\\n(Increases move speed by about 20\u0025, but also increases calorie rate by 2\u0025)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ClothCape is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

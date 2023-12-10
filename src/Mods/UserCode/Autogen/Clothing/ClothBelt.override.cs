@@ -53,7 +53,7 @@ namespace Eco.Mods.TechTree
         // carry weight or movement speed.
         private static Dictionary<UserStatType, float> flatStats = new Dictionary<UserStatType, float>()
         {
-            { UserStatType.MaxCalories, 2000 },
+            { UserStatType.MaxCarryWeight, 2000 },
         };
 
         // Custom GetFlatStats override to pass through our flatstats variable created above.

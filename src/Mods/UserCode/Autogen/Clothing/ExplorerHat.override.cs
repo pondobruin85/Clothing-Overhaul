@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Explorer Hat")] // Defines the localized name of the item.
-    [LocDescription("A classic adventuring hat protecting you from the unknown.")] //The tooltip description for this clothing item.
+    [LocDescription("A classic adventuring hat protecting you from spending all your calories in one place.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ExplorerHat is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
