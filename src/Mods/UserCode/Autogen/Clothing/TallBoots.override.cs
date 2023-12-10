@@ -39,7 +39,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Tall Boots")] // Defines the localized name of the item.
-    [LocDescription("Knee-high boots are boots that rise to the knee, or slightly thereunder. They are generally tighter around the leg shaft and ankle than at the top.")] //The tooltip description for this clothing item.
+    [LocDescription("Rugged boots that provide decent speed through rugged terrain, at the cost of road-speed.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the TallBoots is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

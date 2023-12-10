@@ -36,8 +36,8 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Farmer Shirt")] // Defines the localized name of the item.
-    [LocDescription(" A long-sleeved flannel shirt that is often worn when working outdoors.")] //The tooltip description for this clothing item.
+    [LocDisplayName("Flannel Shirt")] // Defines the localized name of the item.
+    [LocDescription(" A long-sleeved flannel shirt that provides warmth in the coldest places.\n\n(Provides 10% reduced calorie use in cold zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the FarmerShirt is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -75,7 +75,7 @@ namespace Eco.Mods.TechTree
             var recipe = new Recipe();
             recipe.Init(
                 name: "FarmerShirt",  //noloc
-                displayName: Localizer.DoStr("Farmer Shirt"),
+                displayName: Localizer.DoStr("Flannel Shirt"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -97,14 +97,14 @@ namespace Eco.Mods.TechTree
             this.ExperienceOnCraft = 3; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(40, typeof(TailoringSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(200, typeof(TailoringSkill));
 
             // Defines our crafting time for the recipe
             this.CraftMinutes = CreateCraftTimeValue(1);
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Farmer Shirt"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Farmer Shirt"), recipeType: typeof(FarmerShirtRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Flannel Shirt"), recipeType: typeof(FarmerShirtRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

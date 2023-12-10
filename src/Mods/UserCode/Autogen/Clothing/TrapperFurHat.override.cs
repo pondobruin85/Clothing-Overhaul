@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Trapper Fur Hat")] // Defines the localized name of the item.
-    [LocDescription("It sure is warm.")] //The tooltip description for this clothing item.
+    [LocDescription("Look to this cap for the ultimate comfort the most frigid conditions.\n\n(Provides 10% reduced calorie use in cold zones)")] //The tooltip description for this clothing item.
     [StartsDiscovered] // Tells the server this item starts discovered when a new server is made.
     [Weight(100)] // Defines how heavy the TrapperFurHat is.
     [Tag("Clothes")]
@@ -81,7 +81,7 @@ namespace Eco.Mods.TechTree
                 ingredients: new List<IngredientElement>
                 {
                     new IngredientElement(typeof(FurPeltItem), 10, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(FiberglassItem), 5, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
+                    new IngredientElement(typeof(WoolFabricItem), 10, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
                     new IngredientElement(typeof(NylonFabricItem), 10, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
                 },
 

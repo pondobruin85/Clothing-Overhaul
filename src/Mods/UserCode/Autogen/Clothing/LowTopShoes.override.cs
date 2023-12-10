@@ -39,7 +39,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Low Top Shoes")] // Defines the localized name of the item.
-    [LocDescription("Basic, ordinary, every day, run of the mill, nondescript, conventional, commonplace, humdrum, standard, middle-of-the-road, garden-variety low-top shoes.\n\n(Decreases calories consumed when using tools by 10\u0025)")] //The tooltip description for this clothing item.
+    [LocDescription("Basic ordinary, every day, simple low-top shoes.  Nonetheless, they provide a substantial increase to running speed on roads.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the LowTopShoes is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

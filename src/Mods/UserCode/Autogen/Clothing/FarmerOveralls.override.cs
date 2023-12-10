@@ -36,8 +36,8 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Farmer Overalls")] // Defines the localized name of the item.
-    [LocDescription("Comfortable denim overalls to help with the frequent bending over that comes with farm work.")] //The tooltip description for this clothing item.
+    [LocDisplayName("Wool Overalls")] // Defines the localized name of the item.
+    [LocDescription("Wool overalls reinforced with fur provide amazing warmth in the most frigid places.\n\n(Provides 20% reduced calorie use in cold zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the FarmerOveralls is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -75,7 +75,7 @@ namespace Eco.Mods.TechTree
             var recipe = new Recipe();
             recipe.Init(
                 name: "FarmerOveralls",  //noloc
-                displayName: Localizer.DoStr("Farmer Overalls"),
+                displayName: Localizer.DoStr("Wool Overalls"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -105,7 +105,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Farmer Overalls"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Farmer Overalls"), recipeType: typeof(FarmerOverallsRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Wool Overalls"), recipeType: typeof(FarmerOverallsRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

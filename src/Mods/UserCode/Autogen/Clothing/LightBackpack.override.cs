@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Light Backpack")] // Defines the localized name of the item.
-    [LocDescription("Smaller than your standard three-day backpack. You can't fit that much inside, but that makes you more agile.\n\n(Increases movement speed and increases max carry weight by 5 kg)")] //The tooltip description for this clothing item.
+    [LocDescription("A smaller pack that allows for carrying a few more snacks at the cost of eating a few more.\n\n(Provides a 4kg increase to carrying capacity while consuming 5% more calories)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the LightBackpack is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

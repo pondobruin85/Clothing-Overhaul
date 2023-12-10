@@ -36,8 +36,8 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Smith Pants")] // Defines the localized name of the item.
-    [LocDescription("Denim pants with knee patches.")] //The tooltip description for this clothing item.
+    [LocDisplayName("Wool Pants")] // Defines the localized name of the item.
+    [LocDescription("These simple pants provide decent thermal protection in colder climates.\n\n(Provides 10% reduced calorie use in cold zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the SmithPants is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -75,7 +75,7 @@ namespace Eco.Mods.TechTree
             var recipe = new Recipe();
             recipe.Init(
                 name: "SmithPants",  //noloc
-                displayName: Localizer.DoStr("Smith Pants"),
+                displayName: Localizer.DoStr("Wool Pants"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -104,7 +104,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Smith Pants"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Smith Pants"), recipeType: typeof(SmithPantsRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Wool Pants"), recipeType: typeof(SmithPantsRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

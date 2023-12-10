@@ -39,7 +39,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Sandals")] // Defines the localized name of the item.
-    [LocDescription("Basic footwear that helps reduce the strain of walking longer distances.\n\n(Decreases calories consumed when using tools by 10\u0025)")] //The tooltip description for this clothing item.
+    [LocDescription("Basic footwear that travel roads better than they do wilderness.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the Sandals is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

@@ -36,8 +36,8 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Tailor Shirt")] // Defines the localized name of the item.
-    [LocDescription("A form-fitting vest and tie ensemble which includes measuring tape.")] //The tooltip description for this clothing item.
+    [LocDisplayName("Dressy Shirt")] // Defines the localized name of the item.
+    [LocDescription("This refined combination provide the ultimate comfort in temperate climates.\n\n(Provides 20% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the TailorShirt is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -74,7 +74,7 @@ namespace Eco.Mods.TechTree
             var recipe = new Recipe();
             recipe.Init(
                 name: "TailorShirt",  //noloc
-                displayName: Localizer.DoStr("Tailor Shirt"),
+                displayName: Localizer.DoStr("Dressy Shirt"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -103,7 +103,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Tailor Shirt"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Tailor Shirt"), recipeType: typeof(TailorShirtRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Dressy Shirt"), recipeType: typeof(TailorShirtRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

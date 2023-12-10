@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Smith Bandana")] // Defines the localized name of the item.
-    [LocDescription("A cotton bandana that is great for keeping the hair out of your face and acts as a sweat band.")] //The tooltip description for this clothing item.
+    [LocDescription("A cotton bandana that is great for keeping the hair out of your face and acts as a sweat band.\n\n(Provides 5% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the SmithBandana is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

@@ -36,8 +36,8 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Explorer Shirt")] // Defines the localized name of the item.
-    [LocDescription("A simple white shirt with a tie and a colorable vest.")] //The tooltip description for this clothing item.
+    [LocDisplayName("Wool Vest and Shirt")] // Defines the localized name of the item.
+    [LocDescription("A reinforced wool vest and shirt that offers warmth in polar environments.\n\n(Provides 20% reduced calorie use in cold zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ExplorerShirt is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -75,7 +75,7 @@ namespace Eco.Mods.TechTree
             var recipe = new Recipe();
             recipe.Init(
                 name: "ExplorerShirt",  //noloc
-                displayName: Localizer.DoStr("Explorer Shirt"),
+                displayName: Localizer.DoStr("Wool Vest and Shirt"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -103,7 +103,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Explorer Shirt"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Explorer Shirt"), recipeType: typeof(ExplorerShirtRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Wool Vest and Shirt"), recipeType: typeof(ExplorerShirtRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

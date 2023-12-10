@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Trapper Leather Hat")] // Defines the localized name of the item.
-    [LocDescription("Helps keep the sun off your face... and neck... and also ears.")] //The tooltip description for this clothing item.
+    [LocDescription("Brave the most frigid peaks with this warm, comfortable cap!\n\n(Provides 5% reduced calorie use in cold zones)")] //The tooltip description for this clothing item.
     [StartsDiscovered] // Tells the server this item starts discovered when a new server is made.
     [Weight(100)] // Defines how heavy the TrapperLeatherHat is.
     [Tag("Clothes")]

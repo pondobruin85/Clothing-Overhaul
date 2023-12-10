@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Smith Apron")] // Defines the localized name of the item.
-    [LocDescription("A thick leather apron that provides protection from the ocassional chunk of flying metal when hammering on an anvil. Increases maximum carry weight by 2kg.")] //The tooltip description for this clothing item.
+    [LocDescription("A thick leather apron that provides protection to finer garments.  It also has pockets!\n\n(Provides a 4kg increase in carrying capacity)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the SmithApron is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

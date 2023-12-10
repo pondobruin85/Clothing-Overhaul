@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Muffin Hat")] // Defines the localized name of the item.
-    [LocDescription("I have no idea why it's called that but it's not edible.")] //The tooltip description for this clothing item.
+    [LocDescription("I have no idea why it's called that but it's not edible.  Now made with real muffins!\n\n  (Provides 10% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
     [StartsDiscovered] // Tells the server this item starts discovered when a new server is made.
     [Weight(100)] // Defines how heavy the MuffinHat is.
     [Tag("Clothes")]

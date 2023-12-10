@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Shorts")] // Defines the localized name of the item.
-    [LocDescription("Cargo shorts that are ideal for exploring the great outdoors. More practical than elegant.")] //The tooltip description for this clothing item.
+    [LocDescription("Cargo shorts that are ideal for staying comfortable in warmer weather.\n\n(Provides 10% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the Shorts is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

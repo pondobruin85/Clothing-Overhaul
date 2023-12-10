@@ -39,7 +39,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Tailor Shoes")] // Defines the localized name of the item.
-    [LocDescription("Two-toned suede shoes.\n\n(Decreases calories consumed when using tools by 30\u0025)")] //The tooltip description for this clothing item.
+    [LocDescription("These fancy shoes are sure to impress!  Made for walking the city streets, don't expect to explore the jungle in such refined footwear.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the TailorShoes is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -77,7 +77,7 @@ namespace Eco.Mods.TechTree
     /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [RequiresSkill(typeof(TailoringSkill), 7)]
+    [RequiresSkill(typeof(TailoringSkill), 6)]
     public partial class TailorShoesRecipe : RecipeFamily
     {
         public TailorShoesRecipe()

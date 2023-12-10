@@ -36,8 +36,8 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Shipwright Overalls")] // Defines the localized name of the item.
-    [LocDescription("Denim overall for extra sturdy wearability.")] //The tooltip description for this clothing item.
+    [LocDisplayName("Modern Diving Leggings")] // Defines the localized name of the item.
+    [LocDescription("These provide outstanding warmth and comfort when diving worldwide.\n\n (Provides 40% reduced calorie use in water)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ShipwrightOveralls is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -75,7 +75,7 @@ namespace Eco.Mods.TechTree
             var recipe = new Recipe();
             recipe.Init(
                 name: "ShipwrightOveralls",  //noloc
-                displayName: Localizer.DoStr("Shipwright Overalls"),
+                displayName: Localizer.DoStr("Modern Diving Leggings"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -104,7 +104,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Shipwright Overalls"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Shipwright Overalls"), recipeType: typeof(ShipwrightOverallsRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Modern Diving Leggings"), recipeType: typeof(ShipwrightOverallsRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

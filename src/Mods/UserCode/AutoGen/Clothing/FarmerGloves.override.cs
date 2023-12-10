@@ -35,8 +35,8 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Farmer Gloves")] // Defines the localized name of the item.
-    [LocDescription("Water-resistant nylon gloves with textured palms for increased grip.")] //The tooltip description for this clothing item.
+    [LocDisplayName("Modern Gloves")] // Defines the localized name of the item.
+    [LocDescription("Textured palms provide increaded grip strength for the wearer.\n\n(Provides a 4kg increase in carrying capacity)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the FarmerGloves is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -78,7 +78,7 @@ namespace Eco.Mods.TechTree
             var recipe = new Recipe();
             recipe.Init(
                 name: "FarmerGloves",  //noloc
-                displayName: Localizer.DoStr("Farmer Gloves"),
+                displayName: Localizer.DoStr("Modern Gloves"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -107,7 +107,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Farmer Gloves"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Farmer Gloves"), recipeType: typeof(FarmerGlovesRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Modern Gloves"), recipeType: typeof(FarmerGlovesRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

@@ -36,8 +36,8 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Shipwright Hat")] // Defines the localized name of the item.
-    [LocDescription("A simple sailor's cap, don?t lose it or you might be walking on a plank.")] //The tooltip description for this clothing item.
+    [LocDisplayName("Wool Cap")] // Defines the localized name of the item.
+    [LocDescription("A modern wool cap that provides plenty of warmth in colder areas.\n\n(Provides 10% reduced calorie use in cold zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ShipwrightHat is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -75,7 +75,7 @@ namespace Eco.Mods.TechTree
             var recipe = new Recipe();
             recipe.Init(
                 name: "ShipwrightHat",  //noloc
-                displayName: Localizer.DoStr("Shipwright Hat"),
+                displayName: Localizer.DoStr("Wool Cap"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -104,7 +104,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Shipwright Hat"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Shipwright Hat"), recipeType: typeof(ShipwrightHatRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Wool Cap"), recipeType: typeof(ShipwrightHatRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

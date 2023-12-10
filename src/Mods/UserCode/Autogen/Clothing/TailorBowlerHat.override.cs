@@ -36,8 +36,8 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Tailor Bowler Hat")] // Defines the localized name of the item.
-    [LocDescription("A stylish bowler hat made of tighly spun fur felt.")] //The tooltip description for this clothing item.
+    [LocDisplayName("Bowler Hat")] // Defines the localized name of the item.
+    [LocDescription("This modest cap provides nice shade and airflow, making it ideal for warmer climates.\n\n(Provides 5% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the TailorBowlerHat is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -75,7 +75,7 @@ namespace Eco.Mods.TechTree
             var recipe = new Recipe();
             recipe.Init(
                 name: "TailorBowlerHat",  //noloc
-                displayName: Localizer.DoStr("Tailor Bowler Hat"),
+                displayName: Localizer.DoStr("Bowler Hat"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -104,7 +104,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Tailor Bowler Hat"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Tailor Bowler Hat"), recipeType: typeof(TailorBowlerHatRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Bowler Hat"), recipeType: typeof(TailorBowlerHatRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

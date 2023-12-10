@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Gigot Sleeve Shirt")] // Defines the localized name of the item.
-    [LocDescription("Cool piratey shirt that makes your biceps look bigger than they really are.")] //The tooltip description for this clothing item.
+    [LocDescription("A simple vest over a breezy shirt provides just the right amount of comfort in temperate climates.\n\n(Provides 10% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the GigotSleeveShirt is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

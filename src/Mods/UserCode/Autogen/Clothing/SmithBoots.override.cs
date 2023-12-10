@@ -38,8 +38,8 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Smith Boots")] // Defines the localized name of the item.
-    [LocDescription("Heavy duty steel-toed boots.\n\n(Decreases calories consumed when using tools by 30\u0025)")] //The tooltip description for this clothing item.
+    [LocDisplayName("Hyrid Boots")] // Defines the localized name of the item.
+    [LocDescription("These boots provide a compromise of speed between roads and wilderness.  Fast in both, fastest in neither.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the SmithBoots is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -77,7 +77,7 @@ namespace Eco.Mods.TechTree
     /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [RequiresSkill(typeof(TailoringSkill), 7)]
+    [RequiresSkill(typeof(TailoringSkill), 6)]
     public partial class SmithBootsRecipe : RecipeFamily
     {
         public SmithBootsRecipe()
@@ -85,7 +85,7 @@ namespace Eco.Mods.TechTree
             var recipe = new Recipe();
             recipe.Init(
                 name: "SmithBoots",  //noloc
-                displayName: Localizer.DoStr("Smith Boots"),
+                displayName: Localizer.DoStr("Hybrid Boots"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -114,7 +114,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Smith Boots"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Smith Boots"), recipeType: typeof(SmithBootsRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Hybrid Boots"), recipeType: typeof(SmithBootsRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

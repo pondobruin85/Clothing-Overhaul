@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Work Backpack")] // Defines the localized name of the item.
-    [LocDescription("Lighter pack that causes lower calorie consumption.\n\n(Decreases calories consumed when using tools by 10\u0025 and increases max carry weight by 5 kg)")] //The tooltip description for this clothing item.
+    [LocDescription("A modern pack that allows carrying much more at a modest calorie increase.\n\nIncreases carrying capacity by 8kg, Increases calories rate by 5%")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the WorkBackpack is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

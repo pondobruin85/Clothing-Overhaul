@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Square Belt")] // Defines the localized name of the item.
-    [LocDescription("Belt with a square buckle. Increases maximum carry weight by 2kg.")] //The tooltip description for this clothing item.
+    [LocDescription("Belt with a square buckle.  It provides a useful place to carry some extra items.\n\n (Increases maximum carry weight by 4kg.)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the SquareBelt is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -98,7 +98,7 @@ namespace Eco.Mods.TechTree
             this.ExperienceOnCraft = 3; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(400, typeof(TailoringSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(800, typeof(TailoringSkill));
 
             // Defines our crafting time for the recipe
             this.CraftMinutes = CreateCraftTimeValue(1);

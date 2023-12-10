@@ -36,8 +36,8 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Henley")] // Defines the localized name of the item.
-    [LocDescription("A Henley shirt is a collarless pullover shirt, characterized by a placket beneath the round neckline, about 8 to 13 cm long and usually having 2 to 5 buttons. It essentially resembles a collarless polo shirt.")] //The tooltip description for this clothing item.
+    [LocDisplayName("Henley Shirt")] // Defines the localized name of the item.
+    [LocDescription("Named after Henry Henley, a gentleman revered for his ability to stay cool in the hottest elements.\n\n(Provides 10% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the Henley is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -75,7 +75,7 @@ namespace Eco.Mods.TechTree
             var recipe = new Recipe();
             recipe.Init(
                 name: "Henley",  //noloc
-                displayName: Localizer.DoStr("Henley"),
+                displayName: Localizer.DoStr("Henley Shirt"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -104,7 +104,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Henley"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Henley"), recipeType: typeof(HenleyRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Henley Shirt"), recipeType: typeof(HenleyRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.

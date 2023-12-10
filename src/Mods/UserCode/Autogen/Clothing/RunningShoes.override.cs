@@ -39,7 +39,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Running Shoes")] // Defines the localized name of the item.
-    [LocDescription("Light weight shoes designed to make you run faster.\n\n(Increases movement speed)")] //The tooltip description for this clothing item.
+    [LocDescription("Light weight shoes suffer no equal on paved roads.  They provide limited ankle support, making them a poor choice for cross country travels.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the RunningShoes is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

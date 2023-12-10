@@ -38,8 +38,8 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Shipwright Sandals")] // Defines the localized name of the item.
-    [LocDescription("Comfortable sandals with extra traction to avoid slipping.\n\n(Decreases calories consumed when using tools by 30\u0025)")] //The tooltip description for this clothing item.
+    [LocDisplayName("Modern Sandals")] // Defines the localized name of the item.
+    [LocDescription("These fashionable kicks are perfect for zipping around city streets and other urban areas.  Provides modest speed in the wilderness.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ShipwrightSandals is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -77,7 +77,7 @@ namespace Eco.Mods.TechTree
     /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [RequiresSkill(typeof(TailoringSkill), 7)]
+    [RequiresSkill(typeof(TailoringSkill), 6)]
     public partial class ShipwrightSandalsRecipe : RecipeFamily
     {
         public ShipwrightSandalsRecipe()
@@ -85,7 +85,7 @@ namespace Eco.Mods.TechTree
             var recipe = new Recipe();
             recipe.Init(
                 name: "ShipwrightSandals",  //noloc
-                displayName: Localizer.DoStr("Shipwright Sandals"),
+                displayName: Localizer.DoStr("Modern Sandals"),
 
                 // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
                 // type of the item, the amount of the item, the skill required, and the talent used.
@@ -114,7 +114,7 @@ namespace Eco.Mods.TechTree
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Shipwright Sandals"
             this.ModsPreInitialize();
-            this.Initialize(displayText: Localizer.DoStr("Shipwright Sandals"), recipeType: typeof(ShipwrightSandalsRecipe));
+            this.Initialize(displayText: Localizer.DoStr("Modern Sandals"), recipeType: typeof(ShipwrightSandalsRecipe));
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.
