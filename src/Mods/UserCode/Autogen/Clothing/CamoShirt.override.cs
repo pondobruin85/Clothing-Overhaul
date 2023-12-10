@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Camo Shirt")] // Defines the localized name of the item.
-    [LocDescription("Hide from the animals!\n\n(Reduces the detection range of animals)")] //The tooltip description for this clothing item.
+    [LocDescription("Camo is always in always in style!  Or at least it decreases your need to eat while you work.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the CamoShirt is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

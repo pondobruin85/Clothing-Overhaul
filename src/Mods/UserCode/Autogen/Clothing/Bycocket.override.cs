@@ -20,7 +20,7 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.Localization;
     using Eco.Shared.Serialization;
     using Eco.Shared.Utils;
-    using Eco.Shared.View;
+    using Eco.Shared.View;c
     using Eco.Core.Controller;
     using Eco.Gameplay.Items.Recipes;
     using ClothingOverhaul;
@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Bycocket")] // Defines the localized name of the item.
-    [LocDescription("Also called chapeau � bec, or Billed Hat in france due to it's bird-beak like appearance.")] //The tooltip description for this clothing item.
+    [LocDescription("With this wide-brimmed hat, you can give money to the poor without needing to feed yourself too!.")] //The tooltip description for this clothing item.
     [StartsDiscovered] // Tells the server this item starts discovered when a new server is made.
     [Weight(100)] // Defines how heavy the Bycocket is.
     [Tag("Clothes")]

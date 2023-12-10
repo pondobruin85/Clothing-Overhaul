@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Builder Shirt")] // Defines the localized name of the item.
-    [LocDescription("A short sleeved work shirt made from a blend of cotton and synthetic materials. ")] //The tooltip description for this clothing item.
+    [LocDescription("You're not you when you're hungry.  Wear a Builder Shirt. ")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the BuilderShirt is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

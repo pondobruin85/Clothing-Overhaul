@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Builder Overalls")] // Defines the localized name of the item.
-    [LocDescription("Durable overalls with cargo pockets and hammer loops.")] //The tooltip description for this clothing item.
+    [LocDescription("Wear these overalls and you won't want that lunch break!")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the BuilderOveralls is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
