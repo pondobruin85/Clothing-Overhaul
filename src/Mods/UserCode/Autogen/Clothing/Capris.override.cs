@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Capris")] // Defines the localized name of the item.
-    [LocDescription("Too long to be considered shorts, too short to be considered pants, Capri pants decrease calories needed by 20%.")] //The tooltip description for this clothing item.
+    [LocDescription("Too long to be considered shorts, too short to be considered pants, Capris!\n\n(Provides 20% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the Capris is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

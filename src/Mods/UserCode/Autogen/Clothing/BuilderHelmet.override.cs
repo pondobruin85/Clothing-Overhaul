@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Diving Helmet")] // Defines the localized name of the item.
-    [LocDescription("No longer worry about hitting your head on sharp coral.  This helmet is useful to help you swim without waiting an hour after eating.")] //The tooltip description for this clothing item.
+    [LocDescription("No longer worry about hitting your head on sharp coral.  This helmet is useful to help you swim without waiting an hour after eating.\n\n(Provides 20% reduced calorie use in water)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the BuilderHelmet is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

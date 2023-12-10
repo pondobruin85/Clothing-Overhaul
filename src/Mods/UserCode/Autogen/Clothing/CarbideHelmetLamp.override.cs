@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Carbide Helmet Lamp")] // Defines the localized name of the item.
-    [LocDescription("Imitate your favorite dwarf with this stylish cap.  Notice we said imitate.(Decreases calorie consumption by 10%.)")] //The tooltip description for this clothing item.
+    [LocDescription("Imitate your favorite dwarf with this stylish cap.  Notice we said imitate.\n\n(Provides 10% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the CarbideHelmetLamp is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

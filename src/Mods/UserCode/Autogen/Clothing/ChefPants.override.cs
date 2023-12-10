@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Hot Pants")] // Defines the localized name of the item.
-    [LocDescription("Checkered style pants for hiding the extra pounds of extra calorie consumption.")] //The tooltip description for this clothing item.
+    [LocDescription("Checkered style pants for hiding the extra pounds of extra calorie consumption.\n\n(Provides 20% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ChefPants is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

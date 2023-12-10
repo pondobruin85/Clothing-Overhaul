@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Diving Shirt")] // Defines the localized name of the item.
-    [LocDescription("This shirt may look like a jacket a chef would wear, but it really helps you swim without waiting to eat.")] //The tooltip description for this clothing item.
+    [LocDescription("This shirt may look like a jacket a chef would wear, but it really helps you swim without waiting to eat.\n\n(Provides 40% reduced calorie use in water)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ChefShirt is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

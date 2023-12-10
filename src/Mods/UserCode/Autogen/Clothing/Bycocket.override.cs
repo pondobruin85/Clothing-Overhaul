@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Bycocket")] // Defines the localized name of the item.
-    [LocDescription("With this wide-brimmed hat, you can give money to the poor without needing to feed yourself too!.")] //The tooltip description for this clothing item.
+    [LocDescription("With this wide-brimmed hat, you can give money to the poor without needing to feed yourself too!.\n\n(Provides 10% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [StartsDiscovered] // Tells the server this item starts discovered when a new server is made.
     [Weight(100)] // Defines how heavy the Bycocket is.
     [Tag("Clothes")]

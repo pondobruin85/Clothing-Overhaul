@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Chef Hat")] // Defines the localized name of the item.
-    [LocDescription("For chefs to keep their hair in one place while stirring the pots or for anyone who eats food (Decreases calorie consumption by 10%)")] //The tooltip description for this clothing item.
+    [LocDescription("For chefs to keep their hair in one place while stirring the pots or for anyone who eats food.\n\n(Provides 10% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ChefHat is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]

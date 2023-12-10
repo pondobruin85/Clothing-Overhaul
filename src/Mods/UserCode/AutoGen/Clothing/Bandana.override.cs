@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Bandana")] // Defines the localized name of the item.
-    [LocDescription("Bandanas make excellent cooling towels at the beach.  So that you don't eat an hour before swimming, also decreases calories consumed by 10%.")] //The tooltip description for this clothing item.
+    [LocDescription("Bandanas make excellent cooling towels at the beach.  Don't eat an hour before swimming!\n\n(Provides 10% reduced calorie use in water)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the Bandana is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
