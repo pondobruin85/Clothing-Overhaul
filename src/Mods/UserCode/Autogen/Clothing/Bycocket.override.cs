@@ -20,7 +20,7 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.Localization;
     using Eco.Shared.Serialization;
     using Eco.Shared.Utils;
-    using Eco.Shared.View;c
+    using Eco.Shared.View;
     using Eco.Core.Controller;
     using Eco.Gameplay.Items.Recipes;
     using ClothingOverhaul;
