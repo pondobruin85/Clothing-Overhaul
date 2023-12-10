@@ -13,6 +13,7 @@
 //
 //You should have received a copy of the GNU General Public License
 //along with this program.  If not, see <http://www.gnu.org/licenses/>
+
 namespace Eco.Mods.TechTree
 {
     using System.Collections.Generic;
@@ -40,7 +41,7 @@ namespace Eco.Mods.TechTree
     
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Wooden Flippers")] // Defines the localized name of the item.
-    [LocDescription("Rudimentary flippers that allow traveling through the water at a much faster pace.")] //The tooltip description for this clothing item.
+    [LocDescription("Rudimentary flippers that allow traveling through the water at a much faster pace.\n\n Currently not functioning correctly.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the TallBoots is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -66,8 +67,6 @@ namespace Eco.Mods.TechTree
             { typeof(CottonCarpetBlock),          -1.0f },  //  Carpet Blocks
             { typeof(WaterBlock),                  7.0f },  //  Water Blocks            
         };
-
-
     }
     
     [RequiresSkill(typeof(TailoringSkill), 1)]
@@ -85,8 +84,8 @@ namespace Eco.Mods.TechTree
                 ingredients: new List<IngredientElement>
                 {
                     new IngredientElement(typeof(BoardItem), 4, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(FurPeltItem), 2, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(CelluloseFiberItem), 4, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
+                    new IngredientElement(typeof(FurPeltItem), 4, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
+                    new IngredientElement(typeof(CelluloseFiberItem), 10, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
                 },
 
                 // Define our recipe output items.

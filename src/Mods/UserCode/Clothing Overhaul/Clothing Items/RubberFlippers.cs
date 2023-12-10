@@ -13,6 +13,7 @@
 //
 //You should have received a copy of the GNU General Public License
 //along with this program.  If not, see <http://www.gnu.org/licenses/>
+
 namespace Eco.Mods.TechTree
 {
     using System.Collections.Generic;
@@ -40,7 +41,7 @@ namespace Eco.Mods.TechTree
 
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Rubber Flippers")] // Defines the localized name of the item.
-    [LocDescription("These flippers allow moving through the water at remarkable speed.")] //The tooltip description for this clothing item.
+    [LocDescription("High-Tech flippers that allow moving through the water at remarkable speed.\n\nCurrently not functioning.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the BuilderBoots is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -68,7 +69,7 @@ namespace Eco.Mods.TechTree
         };
     }
     
-    [RequiresSkill(typeof(TailoringSkill), 5)]
+    [RequiresSkill(typeof(TailoringSkill), 4)]
     public partial class RubberFlippersRecipe : RecipeFamily
     {
         public RubberFlippersRecipe()
@@ -82,9 +83,9 @@ namespace Eco.Mods.TechTree
                 // type of the item, the amount of the item, the skill required, and the talent used.
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(SteelBarItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(SyntheticRubberItem), 5, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(NylonFabricItem), 5, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
+                    new IngredientElement(typeof(LumberItem), 2, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
+                    new IngredientElement(typeof(SyntheticRubberItem), 10, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
+                    new IngredientElement(typeof(NylonFabricItem), 10, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
                     new IngredientElement(typeof(LinenFabricItem), 5, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
                 },
 
