@@ -38,7 +38,7 @@ namespace Eco.Mods.TechTree
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
-    [LocDisplayName("Hyrid Boots")] // Defines the localized name of the item.
+    [LocDisplayName("Hybrid Boots")] // Defines the localized name of the item.
     [LocDescription("These boots provide a compromise of speed between roads and wilderness.  Fast in both, fastest in neither.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the SmithBoots is.
     [Tag("Clothes")]
