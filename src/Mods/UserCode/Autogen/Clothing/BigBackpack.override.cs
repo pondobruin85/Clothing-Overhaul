@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Big Backpack")] // Defines the localized name of the item.
-    [LocDescription("Bigger (backpacks) are always Better (Backpacks)!\n\n(Increases max carry weight by 10 kg)")] //The tooltip description for this clothing item.
+    [LocDescription("Bigger (backpacks) are always Better (Backpacks)!\n\n(Increases max carry weight by 10 kg and calorie consumption by 10%)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the BigBackpack is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -100,7 +100,7 @@ namespace Eco.Mods.TechTree
             this.ExperienceOnCraft = 3; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(100, typeof(TailoringSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(150, typeof(TailoringSkill));
 
             // Defines our crafting time for the recipe
             this.CraftMinutes = CreateCraftTimeValue(1);

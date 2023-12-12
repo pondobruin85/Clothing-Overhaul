@@ -49,7 +49,7 @@ namespace Eco.Mods.TechTree
         /// <summary>Slot this clothing type belongs to</summary>
         public override string Slot                     { get { return AvatarAppearanceSlots.Head; } }
 
-        public override bool Starter                    { get { return true ; } }
+        public override bool Starter                    { get { return false ; } }
 
         public float TemperatureValue => 0.5f;
 
