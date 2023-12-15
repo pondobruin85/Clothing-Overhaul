@@ -39,8 +39,8 @@ namespace ClothingOverhaul
             { typeof(StoneRoadCubeBlock),          2.5f },  //  Stone Roads    
             { typeof(AsphaltConcreteCubeBlock),    3.0f },  //  Asphalt Roads  
             { typeof(CrushedBasaltBlock),         -0.2f },  //  Crushed Type Blocks            
-            { typeof(ClayBlock),                   0.0f },  //  Clay Blocks            
-            { typeof(SandBlock),                   0.0f },  //  Sand Blocks   
+            { typeof(ClayBlock),                  -0.1f },  //  Clay Blocks            
+            { typeof(SandBlock),                 -0.15f },  //  Sand Blocks   
             { typeof(CottonCarpetBlock),          10.0f },  //  Carpet Blocks
             { typeof(WaterBlock),                  1.0f },  //  Water Blocks            
         };

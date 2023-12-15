@@ -47,7 +47,9 @@ namespace ClothingOverhaul
         }
         public static Type GetBlockTypeAffectingUserMovement(Block blockAtPlayer)
         {         
-            Type blockAtPlayerBlockType = typeof(HewnLogCubeBlock);            
+            Type blockAtPlayerBlockType = typeof(HewnLogCubeBlock);
+            if (blockAtPlayer is SandBlock) { return typeof(SandBlock); }
+            if (blockAtPlayer is ClayBlock) { return typeof(ClayBlock); }
             if (blockAtPlayer is DirtRoadBlock) { return typeof(DirtRoadBlock); }                                       // Return Dirt Roads first because they are also dirt blocks.
             if (blockAtPlayer is DirtBlock) { return typeof(DirtBlock); }                                               // Any blocks that inherit from Dirt Block become Dirt Block to reduce dictionary entries..
             if (blockAtPlayer is IWaterBlock) { return typeof(WaterBlock); }                                            // Water Blocks become water blocks.
@@ -110,6 +112,7 @@ namespace ClothingOverhaul
             float conversionMultiplier = 0.7f;                                                                      // base move speed, which is 3.3. Then we subract 1.8, giving us a 1.5-8.5 
                                                                                                                     // scale (8.5 is needed bonus for max diagonal walking speed on asphalt roads.
             return ((conversionMultiplier * sumOfMoveSpeedBonuses - baseMoveSpeedReduction) / MathF.Sqrt(blockEfficiencyBonus)) + (baseMoveSpeed - baseMoveSpeed * blockEfficiencyBonus) ; 
+        //    return conversionMultiplier * sumOfMoveSpeedBonuses - baseMoveSpeedReduction;
         }
     }           
 }
