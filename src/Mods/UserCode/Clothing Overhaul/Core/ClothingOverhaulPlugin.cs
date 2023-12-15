@@ -42,7 +42,7 @@ namespace ClothingOverhaul
             ModsChangeBenefits();
             UserManager.OnUserLoggedIn.Add(OnUserLoggedIn);
             UserManager.OnUserLoggedOut.Add(OnUserLoggedOut);
-            PeriodicWorkerFactory.CreateWithInterval(TimeSpan.FromSeconds(2), SwimSpeedUpdater.ChangeGlobalSwimSpeed).Start();  //100 for linux servers, 1 for windows servers.
+            PeriodicWorkerFactory.CreateWithInterval(TimeSpan.FromSeconds(200), SwimSpeedUpdater.ChangeGlobalSwimSpeed).Start();  //200 for linux servers, 2 for windows servers.
         }
         partial void ModsChangeBenefits();
         private IEnumerable<ILoggedInClothingOverhaul> DiscoverILoggedInClothingOverhaul()
