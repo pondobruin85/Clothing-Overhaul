@@ -65,7 +65,7 @@ namespace Eco.Mods.TechTree
             { typeof(ClayBlock),                  -1.0f },  //  Clay Blocks            
             { typeof(SandBlock),                   1.0f },  //  Sand Blocks   
             { typeof(CottonCarpetBlock),          -1.0f },  //  Carpet Blocks
-            { typeof(WaterBlock),                  7.0f },  //  Water Blocks            
+            { typeof(WaterBlock),                  5.0f },  //  Water Blocks            
         };
     }
     
