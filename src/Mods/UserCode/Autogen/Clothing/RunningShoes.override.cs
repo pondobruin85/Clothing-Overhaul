@@ -52,16 +52,16 @@ namespace Eco.Mods.TechTree
         public override bool Starter                    { get { return false ; } }
         public Dictionary<Type, float> BlockMovespeedModifiers { get; } = new Dictionary<Type, float>()
         {
-            { typeof(HewnLogCubeBlock),            5.0f },  //  Hewn Log Blocks / Default Modifier
-            { typeof(DirtBlock),                   4.0f },  //  Dirt Blocks                                                            
-            { typeof(BasaltBlock),                 4.0f },  //  Solid Rock Type Blocks      
+            { typeof(HewnLogCubeBlock),            6.0f },  //  Hewn Log Blocks / Default Modifier
+            { typeof(DirtBlock),                   3.0f },  //  Dirt Blocks                                                            
+            { typeof(BasaltBlock),                 3.0f },  //  Solid Rock Type Blocks      
             { typeof(DirtRoadBlock),               7.0f },  //  Dirt Road Blocks            
-            { typeof(StoneRoadCubeBlock),          9.0f },  //  Stone Roads    
+            { typeof(StoneRoadCubeBlock),          8.0f },  //  Stone Roads    
             { typeof(AsphaltConcreteCubeBlock),   10.0f },  //  Asphalt Roads  
-            { typeof(CrushedBasaltBlock),          4.0f },  //  Crushed Type Blocks            
-            { typeof(ClayBlock),                   3.5f },  //  Clay Blocks            
+            { typeof(CrushedBasaltBlock),          3.0f },  //  Crushed Type Blocks            
+            { typeof(ClayBlock),                   3.0f },  //  Clay Blocks            
             { typeof(SandBlock),                   3.0f },  //  Sand Blocks   
-            { typeof(CottonCarpetBlock),           3.5f },  //  Carpet Blocks
+            { typeof(CottonCarpetBlock),           3.0f },  //  Carpet Blocks
             { typeof(WaterBlock),                  0.0f },  //  Water Blocks               
         };
     }

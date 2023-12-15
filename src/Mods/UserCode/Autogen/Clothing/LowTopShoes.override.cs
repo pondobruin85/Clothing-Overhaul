@@ -54,16 +54,16 @@ namespace Eco.Mods.TechTree
 
         public Dictionary<Type, float> BlockMovespeedModifiers { get; } = new Dictionary<Type, float>()
         {
-            { typeof(HewnLogCubeBlock),            4.0f },  //  Hewn Log Blocks / Default Modifier
-            { typeof(DirtBlock),                   3.0f },  //  Dirt Blocks                                                            
-            { typeof(BasaltBlock),                 3.0f },  //  Solid Rock Type Blocks      
-            { typeof(DirtRoadBlock),               5.0f },  //  Dirt Road Blocks            
-            { typeof(StoneRoadCubeBlock),          6.0f },  //  Stone Roads    
-            { typeof(AsphaltConcreteCubeBlock),    7.0f },  //  Asphalt Roads  
-            { typeof(CrushedBasaltBlock),          3.0f },  //  Crushed Type Blocks            
-            { typeof(ClayBlock),                   3.5f },  //  Clay Blocks            
-            { typeof(SandBlock),                   3.0f },  //  Sand Blocks   
-            { typeof(CottonCarpetBlock),           5.0f },  //  Carpet Blocks
+            { typeof(HewnLogCubeBlock),            2.0f },  //  Hewn Log Blocks / Default Modifier
+            { typeof(DirtBlock),                   1.0f },  //  Dirt Blocks                                                            
+            { typeof(BasaltBlock),                 1.0f },  //  Solid Rock Type Blocks      
+            { typeof(DirtRoadBlock),               3.0f },  //  Dirt Road Blocks            
+            { typeof(StoneRoadCubeBlock),          4.0f },  //  Stone Roads    
+            { typeof(AsphaltConcreteCubeBlock),    5.0f },  //  Asphalt Roads  
+            { typeof(CrushedBasaltBlock),          1.0f },  //  Crushed Type Blocks            
+            { typeof(ClayBlock),                   1.0f },  //  Clay Blocks            
+            { typeof(SandBlock),                   1.0f },  //  Sand Blocks   
+            { typeof(CottonCarpetBlock),           2.0f },  //  Carpet Blocks
             { typeof(WaterBlock),                  0.0f },  //  Water Blocks               
         };
     }
