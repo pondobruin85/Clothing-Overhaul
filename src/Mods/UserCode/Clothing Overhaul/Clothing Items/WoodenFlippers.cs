@@ -41,7 +41,7 @@ namespace Eco.Mods.TechTree
     
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Wooden Flippers")] // Defines the localized name of the item.
-    [LocDescription("Rudimentary flippers that allow traveling through the water at a much faster pace.\n\n Currently not functioning correctly.")] //The tooltip description for this clothing item.
+    [LocDescription("Rudimentary flippers that allow traveling through the water at a much faster pace.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the TallBoots is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
