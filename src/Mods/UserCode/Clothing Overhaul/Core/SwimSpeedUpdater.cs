@@ -13,35 +13,36 @@
 //
 //You should have received a copy of the GNU General Public License
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
-using ClothingOverhaul;
 using Eco.Gameplay.DynamicValues;
 using Eco.Gameplay.Players;
+using Eco.Gameplay.Systems;
 using Eco.Shared.Localization;
-using Eco.Shared.Math;
 using Eco.Shared.Utils;
-using Eco.Simulation;
+using Eco.Simulation.WorldLayers;
+using Eco.World;
 using System;
 
 namespace ClothingOverhaul
 {
-    [Benefit]
-    public partial class PlayerMovement : ClothingOverhaulBase
-    {
-        protected virtual StatModifiersRegister ModifiersRegister { get; } = new StatModifiersRegister();
+    public class SwimSpeedUpdater
+    {        
+        static bool Toggle = false;
 
-        public PlayerMovement()
-        {           
-            ModifierFunction = new MovementFunction();     
-        }
-        public override void ApplyClothingOverhaulToUser(User user)
-        {  
-            IDynamicValue modifier = new ModifierDynamicValue(ModifierFunction);
-
-            Action updatePlayerLocation = user.ChangedMovementSpeed;
-            ModifiersRegister.AddModifierToUser(user, UserStatType.MovementSpeed, modifier, updatePlayerLocation);
-        }
-        public override void RemoveClothingOverhaulFromUser(User user)
+        public static void ChangeGlobalSwimSpeed()
         {
+            if (Toggle)
+            {
+                GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean += .01f;
+                GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean += .01f;
+                Toggle = false;
+            }
+            else
+            {
+                GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean -= .01f;
+                GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean -= .01f;
+                Toggle = true;
+            }
+            //Log.WriteLine(Localizer.DoStr("Ocean: " + GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean.ToString() + " DeepOcean: " + GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean.ToString()));
         }
     }
 }

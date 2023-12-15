@@ -63,7 +63,7 @@ namespace Eco.Mods.TechTree
             { typeof(AsphaltConcreteCubeBlock),    1.0f },  //  Asphalt Roads  
             { typeof(CrushedBasaltBlock),          1.0f },  //  Crushed Type Blocks            
             { typeof(ClayBlock),                   1.0f },  //  Clay Blocks            
-            { typeof(SandBlock),                   2.0f },  //  Sand Blocks   
+            { typeof(SandBlock),                   5.0f },  //  Sand Blocks   
             { typeof(CottonCarpetBlock),           1.0f },  //  Carpet Blocks
             { typeof(WaterBlock),                 10.0f },  //  Water Blocks            
         };

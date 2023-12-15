@@ -15,6 +15,7 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using Eco.Core.Plugins.Interfaces;
 using Eco.Core.Utils;
+using Eco.Core.Utils.Threading;
 using Eco.Gameplay.Players;
 using Eco.Shared.Localization;
 using Eco.Shared.Utils;
@@ -41,6 +42,7 @@ namespace ClothingOverhaul
             ModsChangeBenefits();
             UserManager.OnUserLoggedIn.Add(OnUserLoggedIn);
             UserManager.OnUserLoggedOut.Add(OnUserLoggedOut);
+            PeriodicWorkerFactory.CreateWithInterval(TimeSpan.FromSeconds(2), SwimSpeedUpdater.ChangeGlobalSwimSpeed).Start();  //100 for linux servers, 1 for windows servers.
         }
         partial void ModsChangeBenefits();
         private IEnumerable<ILoggedInClothingOverhaul> DiscoverILoggedInClothingOverhaul()
