@@ -32,13 +32,11 @@ namespace ClothingOverhaul
             {
                 GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean += .01f;
                 GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean += .01f;
-                Toggle = false;
             }
             else
             {
                 GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean -= .01f;
                 GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean -= .01f;
-                Toggle = true;
             }
             //Log.WriteLine(Localizer.DoStr("Ocean: " + GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean.ToString() + " DeepOcean: " + GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean.ToString()));
         }
