@@ -31,14 +31,19 @@ namespace ClothingOverhaul
             if (GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean < 1f)
             {
                 GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean += .01f;
-                GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean += .01f;
             }
             else
             {
                 GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean -= .01f;
+            }
+            if (GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean < 1f)
+            {
+                GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean += .01f;
+            }
+            else
+            {
                 GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean -= .01f;
             }
-            //Log.WriteLine(Localizer.DoStr("Ocean: " + GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean.ToString() + " DeepOcean: " + GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean.ToString()));
         }
     }
 }
