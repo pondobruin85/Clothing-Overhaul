@@ -25,12 +25,10 @@ using System;
 namespace ClothingOverhaul
 {
     public class SwimSpeedUpdater
-    {        
-        static bool Toggle = false;
-
+    {
         public static void ChangeGlobalSwimSpeed()
         {
-            if (Toggle)
+            if (GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean < 1f)
             {
                 GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean += .01f;
                 GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean += .01f;
