@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Basic Backpack")] // Defines the localized name of the item.
-    [LocDescription("A basic backpack to carry supplies.\n\n(Increases max carry weight by 5 kg)")] //The tooltip description for this clothing item.
+    [LocDescription("A basic backpack to carry supplies.")] //The tooltip description for this clothing item.
     [StartsDiscovered] // Tells the server this item starts discovered when a new server is made.
     [Weight(100)] // Defines how heavy the BasicBackpack is.
     [Tag("Clothes")]

@@ -69,7 +69,7 @@ namespace Eco.Mods.TechTree
         };
     }
     
-    [RequiresSkill(typeof(TailoringSkill), 4)]
+    [RequiresSkill(typeof(TailoringSkill), 6)]
     public partial class RubberFlippersRecipe : RecipeFamily
     {
         public RubberFlippersRecipe()
