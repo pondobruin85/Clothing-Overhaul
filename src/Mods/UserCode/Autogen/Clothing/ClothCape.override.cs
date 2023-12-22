@@ -54,7 +54,7 @@ namespace Eco.Mods.TechTree
         private static Dictionary<UserStatType, float> flatStats = new Dictionary<UserStatType, float>()
         {
             { UserStatType.MovementSpeed, 0.2f},
-            { UserStatType.CalorieRate, 0.2f},
+            { UserStatType.CalorieRate, 0.02f},
             { UserStatType.DetectionRange, 0.5f},
         };
 
