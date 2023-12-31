@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Explorer Pants")] // Defines the localized name of the item.
-    [LocDescription("Reinforced pants for exploring but still fashionable.  Doubles as swim bottoms!\n\n(Provides 20% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
+    [LocDescription("Reinforced pants for exploring but still fashionable.  Doubles as swim bottoms!\n\n(Provides 10% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ExplorerPants is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
@@ -52,7 +52,7 @@ namespace Eco.Mods.TechTree
 
         public float TemperatureValue => 0.5f;
 
-        public float MaxCalorieRateBonus => 0.2f;
+        public float MaxCalorieRateBonus => 0.1f;
 
         public bool IsSwimwear => true;
 
