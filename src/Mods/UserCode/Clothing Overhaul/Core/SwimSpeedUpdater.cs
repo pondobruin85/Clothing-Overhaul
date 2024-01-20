@@ -28,7 +28,7 @@ namespace ClothingOverhaul
     {
         public static void ChangeGlobalSwimSpeed()
         {
-            if (GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean < 1f)
+            if (GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean < 0.9f)
             {
                 GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean += .01f;
             }
@@ -36,7 +36,7 @@ namespace ClothingOverhaul
             {
                 GlobalData.Obj.DifficultyConfig.SwimSpeed.Ocean -= .01f;
             }
-            if (GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean < 1f)
+            if (GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean < 0.5f)
             {
                 GlobalData.Obj.DifficultyConfig.SwimSpeed.DeepOcean += .01f;
             }
