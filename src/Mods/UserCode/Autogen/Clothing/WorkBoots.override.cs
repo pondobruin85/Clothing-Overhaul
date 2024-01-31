@@ -67,7 +67,7 @@ namespace Eco.Mods.TechTree
             { typeof(ClayBlock),                   8.0f },  //  Clay Blocks            
             { typeof(SandBlock),                   8.0f },  //  Sand Blocks   
             { typeof(CottonCarpetBlock),           3.0f },  //  Carpet Blocks
-            { typeof(WaterBlock),                 -1.0f },  //  Water Blocks               
+            { typeof(WaterBlock),                  0.0f },  //  Water Blocks               
         };
     }
     
@@ -95,8 +95,8 @@ namespace Eco.Mods.TechTree
                 ingredients: new List<IngredientElement>
                 {                 
                     new IngredientElement(typeof(LeatherHideItem), 20, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement("Fabric", 20, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)), //noloc
-                    new IngredientElement(typeof(IronBarItem), 4, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
+                    new IngredientElement("Fabric", 10, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)), //noloc
+                    new IngredientElement(typeof(IronPlateItem), 2, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
                 },
 
                 // Define our recipe output items.
