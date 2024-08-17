@@ -38,7 +38,7 @@ namespace ClothingOverhaul
         public void Initialize(TimedTask timer)
         {
             ClothingOverhaulMod.AddRange(DiscoverILoggedInClothingOverhaul());
-            Log.WriteLine(Localizer.DoStr("Clothing Overhaul Status: " + GetStatus()));
+           // Log.WriteLine(Localizer.DoStr("Clothing Overhaul Status: " + GetStatus()));
             ModsChangeBenefits();
             UserManager.OnUserLoggedIn.Add(OnUserLoggedIn);
             UserManager.OnUserLoggedOut.Add(OnUserLoggedOut);
