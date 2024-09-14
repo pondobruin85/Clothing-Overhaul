@@ -38,10 +38,10 @@ namespace ClothingOverhaul
     {
         public static Block GetBlockAffectingUserMovement(User user)
         {
-            Block blockAtPlayer = Eco.World.World.GetBlock(user.Position.XYZi());
+            Block blockAtPlayer = Eco.World.World.GetBlock(user.Position.XYZi() - new Vector3i(0, 1, 0));
             if (blockAtPlayer is EmptyBlock || blockAtPlayer is PlantBlock || blockAtPlayer is TreeDebrisBlock)
             {
-                blockAtPlayer = Eco.World.World.GetBlock(user.Position.XYZi() - new Vector3i(0, 1, 0));
+                blockAtPlayer = Eco.World.World.GetBlock(user.Position.XYZi() - new Vector3i(0, 2, 0));
             }
             return blockAtPlayer;
         }
