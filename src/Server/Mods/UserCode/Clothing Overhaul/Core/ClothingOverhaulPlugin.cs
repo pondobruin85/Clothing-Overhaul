@@ -29,7 +29,7 @@ public class ClothingOverhaulMod : IModInit
 {
     public static ModRegistration Register() => new()
     {
-        ModName = "Clothing Overhaul",
+        ModName = "ClothingOverhaul",
         ModDescription = "Overhauls clothing to provide calorie benefits based on temperature.  Boots also provide added movespeed based on blocks and shoe type.  Clothing descriptions re-written, special flippers added.  Also provides special barefoot modifiers for hunter/gatherers.",
         ModDisplayName = "Clothing Overhaul",
     };
