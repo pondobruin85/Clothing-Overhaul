@@ -1,4 +1,4 @@
-# Clothing Overhaul for Eco v0.10.0
+# Clothing Overhaul for Eco v0.11.1
 
 Clothing and movement speed completely reworked.  
 
