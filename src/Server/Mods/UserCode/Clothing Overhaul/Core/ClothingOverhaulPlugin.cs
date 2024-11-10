@@ -30,8 +30,15 @@ namespace ClothingOverhaul
     /// Alter clothing bonuses to have unique modifiers according to the type of block the player is standing on.
     /// The clothing and blocktype can have a positive or negative benefit to movespeed, maximum calories, calorie burn rate, carry capacity, carry stack size, and animal detection range.  
     /// </summary>
-    public partial class ClothingOverhaulPlugin : IModKitPlugin, IInitializablePlugin
+    public partial class ClothingOverhaulPlugin : IModKitPlugin, IInitializablePlugin, IModInit
     {
+        public static ModRegistration Register() => new()
+        {
+            ModName = "Clothing Overhaul,",
+            ModDescription = "Overhauls clothing to provide calorie benefits based on temperature.  Boots also provide added movespeed based on blocks and shoe type.  Clothing descriptions re-written, special flippers added.  Also provides special barefoot modifiers for hunter/gatherers.",
+            ModDisplayName = "Clothing Overhaul",
+        };
+
         public string GetCategory() => "Mod";
         public string GetStatus() => (ClothingOverhaulMod.Any() ? "Loaded Clothing Overhaul:" + string.Concat(ClothingOverhaulMod.Select(overhaul => " " + overhaul.GetType().Name)) : "No Clothing Overhaul loaded");
         public List<ILoggedInClothingOverhaul> ClothingOverhaulMod { get; } = new List<ILoggedInClothingOverhaul>();
