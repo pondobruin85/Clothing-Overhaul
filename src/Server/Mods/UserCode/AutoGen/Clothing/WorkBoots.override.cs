@@ -42,7 +42,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Work Boots")] // Defines the localized name of the item.
-    [LocDescription("High ankle support and rugged soles provide exceelent speed through rugged terrain, but average speed on roadways.")] //The tooltip description for this clothing item.
+    [LocDescription("High ankle support and rugged soles provide excellent speed through rugged terrain, but average speed on roadways.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the WorkBoots is.
     [Tag("Clothes")]
     [Ecopedia("Items", "Clothing", createAsSubPage: true)]
