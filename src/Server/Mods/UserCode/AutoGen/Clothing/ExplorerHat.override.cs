@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("A classic adventuring hat protecting you from spending all your calories in one place.\n\n(Provides 10% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ExplorerHat is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Head")]
+    [Ecopedia("Clothing", "Clothing - Head", createAsSubPage: true)]
     public partial class ExplorerHatItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

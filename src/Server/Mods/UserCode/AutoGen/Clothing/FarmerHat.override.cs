@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription(" A wide-brimmed simple hat that manages to provide great protection from the scorching sun.\n\n(Provides 5% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the FarmerHat is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Head")]
+    [Ecopedia("Clothing", "Clothing - Head", createAsSubPage: true)]
     public partial class FarmerHatItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

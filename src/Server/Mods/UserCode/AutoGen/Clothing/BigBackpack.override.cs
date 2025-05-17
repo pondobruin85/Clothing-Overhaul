@@ -39,7 +39,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Bigger (backpacks) are always Better (Backpacks)!\n\n(Increases max carry weight by 10 kg and calorie consumption by 10%)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the BigBackpack is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Back")]
+    [Ecopedia("Clothing", "Clothing - Back", createAsSubPage: true)]
     public partial class BigBackpackItem :
         ClothingItem
     {

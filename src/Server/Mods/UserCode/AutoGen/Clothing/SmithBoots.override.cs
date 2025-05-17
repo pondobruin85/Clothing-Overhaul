@@ -42,7 +42,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("These boots provide a compromise of speed between roads and wilderness.  Fast in both, fastest in neither.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the SmithBoots is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Feet")]
+    [Ecopedia("Clothing", "Clothing - Feet", createAsSubPage: true)]
     public partial class SmithBootsItem :
         ClothingItem , IClothingOverhaulBlockMovespeedDictionary
     {

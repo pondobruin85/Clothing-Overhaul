@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Imitate your favorite dwarf with this stylish cap.  Notice we said imitate.\n\n(Provides 10% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the CarbideHelmetLamp is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Head")]
+    [Ecopedia("Clothing", "Clothing - Head", createAsSubPage: true)]
     public partial class CarbideHelmetLampItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

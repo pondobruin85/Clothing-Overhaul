@@ -39,7 +39,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Steel plates and modern craftsmanship provide incredible carrying strength.\n\n(Provides a 6kg increase in carrying capacity)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the SmithGloves is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Hands")]
+    [Ecopedia("Clothing", "Clothing - Hands", createAsSubPage: true)]
     public partial class SmithGlovesItem :
         ClothingItem
     {

@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("A reinforced wool vest and shirt that offers warmth in polar environments.\n\n(Provides 20% reduced calorie use in cold zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ExplorerShirt is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Chest")]
+    [Ecopedia("Clothing", "Clothing - Chest", createAsSubPage: true)]
     public partial class ExplorerShirtItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

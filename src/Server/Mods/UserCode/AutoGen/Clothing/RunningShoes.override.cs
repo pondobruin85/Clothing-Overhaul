@@ -42,7 +42,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Light weight shoes suffer no equal on paved roads.  They provide limited ankle support, making them a poor choice for cross country travels.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the RunningShoes is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Feet")]
+    [Ecopedia("Clothing", "Clothing - Feet", createAsSubPage: true)]
     public partial class RunningShoesItem : ClothingItem, IClothingOverhaulBlockMovespeedDictionary
     {
 

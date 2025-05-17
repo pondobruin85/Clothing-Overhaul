@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("A modern wool cap that provides plenty of warmth in colder areas.\n\n(Provides 10% reduced calorie use in cold zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ShipwrightHat is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Head")]
+    [Ecopedia("Clothing", "Clothing - Head", createAsSubPage: true)]
     public partial class ShipwrightHatItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

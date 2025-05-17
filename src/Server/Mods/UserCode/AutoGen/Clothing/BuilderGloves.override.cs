@@ -39,7 +39,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Stay comfortable with these multipurpose gloves useful for carrying an additional 2 kg.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the BuilderGloves is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Hands")]
+    [Ecopedia("Clothing", "Clothing - Hands", createAsSubPage: true)]
     public partial class BuilderGlovesItem :
         ClothingItem
     {

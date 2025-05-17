@@ -39,7 +39,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Textured palms provide increaded grip strength for the wearer.\n\n(Provides a 4kg increase in carrying capacity)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the FarmerGloves is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Hands")]
+    [Ecopedia("Clothing", "Clothing - Hands", createAsSubPage: true)]
     public partial class FarmerGlovesItem :
         ClothingItem
     {

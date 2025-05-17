@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("You're not you when you're hungry.  Wear a Builder Shirt. \n\n(Provides 20% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the BuilderShirt is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Chest")]
+    [Ecopedia("Clothing", "Clothing - Chest", createAsSubPage: true)]
     public partial class BuilderShirtItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

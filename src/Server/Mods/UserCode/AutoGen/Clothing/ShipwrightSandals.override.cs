@@ -42,7 +42,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("These fashionable kicks are perfect for zipping around city streets and other urban areas.  Provides modest speed in the wilderness.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ShipwrightSandals is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Feet")]
+    [Ecopedia("Clothing", "Clothing - Feet", createAsSubPage: true)]
     public partial class ShipwrightSandalsItem :
         ClothingItem , IClothingOverhaulBlockMovespeedDictionary
     {

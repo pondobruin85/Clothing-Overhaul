@@ -41,7 +41,8 @@ namespace Eco.Mods.TechTree
     [StartsDiscovered] // Tells the server this item starts discovered when a new server is made.
     [Weight(100)] // Defines how heavy the Bycocket is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Head")]
+    [Ecopedia("Clothing", "Clothing - Head", createAsSubPage: true)]
     public partial class BycocketItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

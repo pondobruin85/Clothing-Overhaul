@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("These simple pants provide great comfort in mild climates.\n\n (Provides 10% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the Trousers is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Legs")]
+    [Ecopedia("Clothing", "Clothing - Legs", createAsSubPage: true)]
     public partial class TrousersItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

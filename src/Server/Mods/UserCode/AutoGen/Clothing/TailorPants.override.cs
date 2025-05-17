@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("These custom tailored pants provide amazing airflow for warm climates.\n\n(Provides 20% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the TailorPants is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Legs")]
+    [Ecopedia("Clothing", "Clothing - Legs", createAsSubPage: true)]
     public partial class TailorPantsItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

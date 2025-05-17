@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("A cotton bandana that is great for keeping the hair out of your face and acts as a sweat band.\n\n(Provides 5% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the SmithBandana is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Head")]
+    [Ecopedia("Clothing", "Clothing - Head", createAsSubPage: true)]
     public partial class SmithBandanaItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

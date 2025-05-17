@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Camo is always in style!  Or at least it decreases your need to eat while you work.\n\n(Provides 10% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the CamoShirt is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Chest")]
+    [Ecopedia("Clothing", "Clothing - Chest", createAsSubPage: true)]
     public partial class CamoShirtItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

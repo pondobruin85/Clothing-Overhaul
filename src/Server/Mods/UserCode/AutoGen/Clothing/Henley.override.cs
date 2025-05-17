@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Named after Henry Henley, a gentleman revered for his ability to stay cool in the hottest elements.\n\n(Provides 10% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the Henley is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Chest")]
+    [Ecopedia("Clothing", "Clothing - Chest", createAsSubPage: true)]
     public partial class HenleyItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

@@ -39,7 +39,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Belt with a square buckle.  It provides a useful place to carry some extra items.\n\n (Increases maximum carry weight by 4kg.)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the SquareBelt is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Waist")]
+    [Ecopedia("Clothing", "Clothing - Waist", createAsSubPage: true)]
     public partial class SquareBeltItem :
         ClothingItem
     {

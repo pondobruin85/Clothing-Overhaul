@@ -39,7 +39,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Bare bears cannot bear berries without BearPacks\n\n(Increases max carry weight by 15 kg)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the Bearpack is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Back")]
+    [Ecopedia("Clothing", "Clothing - Back", createAsSubPage: true)]
     public partial class BearpackItem :
         ClothingItem
     {

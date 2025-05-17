@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("For anyone who has been Indiana Jones for Halloween 30 years in a row.\n\n(Provides 5% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the DerpyHat is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Head")]
+    [Ecopedia("Clothing", "Clothing - Head", createAsSubPage: true)]
     public partial class DerpyHatItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

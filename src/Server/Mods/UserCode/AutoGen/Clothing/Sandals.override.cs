@@ -42,7 +42,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Basic footwear that travel roads better than they do wilderness.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the Sandals is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Feet")]
+    [Ecopedia("Clothing", "Clothing - Feet", createAsSubPage: true)]
     public partial class SandalsItem :
         ClothingItem, IClothingOverhaulBlockMovespeedDictionary
     {

@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("A striped shirt symbolizing your affinity for traveling across the seas.  Usually by swimming in them.\n\n(Provides 20% reduced calorie use in water)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ShipwrightShirt is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Chest")]
+    [Ecopedia("Clothing", "Clothing - Chest", createAsSubPage: true)]
     public partial class ShipwrightShirtItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Too long to be considered shorts, too short to be considered pants, Capris!\n\n(Provides 20% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the Capris is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Legs")]
+    [Ecopedia("Clothing", "Clothing - Legs", createAsSubPage: true)]
     public partial class CaprisItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

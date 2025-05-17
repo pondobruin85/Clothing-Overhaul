@@ -39,7 +39,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Call it a sash, call it a cumberbund, but don't call it a late to dinner.\n\n(Increases maximum carry weight by 2kg)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ClothBelt is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Waist")]
+    [Ecopedia("Clothing", "Clothing - Waist", createAsSubPage: true)]
     public partial class ClothBeltItem :
         ClothingItem
     {

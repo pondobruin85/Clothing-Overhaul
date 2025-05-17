@@ -41,7 +41,8 @@ namespace Eco.Mods.TechTree
     [StartsDiscovered] // Tells the server this item starts discovered when a new server is made.
     [Weight(100)] // Defines how heavy the TrapperFurHat is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Head")]
+    [Ecopedia("Clothing", "Clothing - Head", createAsSubPage: true)]
     public partial class TrapperFurHatItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

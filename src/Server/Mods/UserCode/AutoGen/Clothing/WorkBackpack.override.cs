@@ -39,7 +39,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("A modern pack that allows carrying much more at a modest calorie increase.\n\nIncreases carrying capacity by 8kg, Increases calories rate by 5%")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the WorkBackpack is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Back")]
+    [Ecopedia("Clothing", "Clothing - Back", createAsSubPage: true)]
     public partial class WorkBackpackItem :
         ClothingItem
     {

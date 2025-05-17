@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("These provide outstanding warmth and comfort when diving worldwide.\n\n (Provides 40% reduced calorie use in water)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ShipwrightOveralls is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Legs")]
+    [Ecopedia("Clothing", "Clothing - Legs", createAsSubPage: true)]
     public partial class ShipwrightOverallsItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

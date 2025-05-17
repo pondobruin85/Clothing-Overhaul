@@ -42,7 +42,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Basic ordinary, every day, simple low-top shoes.  Nonetheless, they provide a substantial increase to running speed on roads.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the LowTopShoes is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Feet")]
+    [Ecopedia("Clothing", "Clothing - Feet", createAsSubPage: true)]
     public partial class LowTopShoesItem :
         ClothingItem , IClothingOverhaulBlockMovespeedDictionary
     {

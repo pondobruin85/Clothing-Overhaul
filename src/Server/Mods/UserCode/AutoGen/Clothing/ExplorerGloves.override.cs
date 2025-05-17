@@ -39,7 +39,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Sturdy gloves comfortably lined with cotton for extra insulation against the elements.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ExplorerGloves is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Hands")]
+    [Ecopedia("Clothing", "Clothing - Hands", createAsSubPage: true)]
     public partial class ExplorerGlovesItem :
         ClothingItem
     {

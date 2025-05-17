@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("This refined combination provide the ultimate comfort in temperate climates.\n\n(Provides 20% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the TailorShirt is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Chest")]
+    [Ecopedia("Clothing", "Clothing - Chest", createAsSubPage: true)]
     public partial class TailorShirtItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

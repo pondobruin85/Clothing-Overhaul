@@ -39,7 +39,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("A thick leather apron that provides protection to finer garments.  It also has pockets!\n\n(Provides a 4kg increase in carrying capacity)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the SmithApron is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Waist")]
+    [Ecopedia("Clothing", "Clothing - Waist", createAsSubPage: true)]
     public partial class SmithApronItem :
         ClothingItem
     {

@@ -42,7 +42,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Medium weight, neutral balance running shoe for running on pavement. Wear at your own risk in the water.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ChefShoes is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Feet")]
+    [Ecopedia("Clothing", "Clothing - Feet", createAsSubPage: true)]
     public partial class ChefShoesItem :
         ClothingItem , IClothingOverhaulBlockMovespeedDictionary
     {

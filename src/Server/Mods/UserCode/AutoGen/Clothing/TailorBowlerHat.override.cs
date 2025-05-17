@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("This modest cap provides nice shade and airflow, making it ideal for warmer climates.\n\n(Provides 5% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the TailorBowlerHat is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Head")]
+    [Ecopedia("Clothing", "Clothing - Head", createAsSubPage: true)]
     public partial class TailorBowlerHatItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

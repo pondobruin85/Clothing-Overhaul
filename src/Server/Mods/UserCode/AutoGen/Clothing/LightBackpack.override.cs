@@ -39,7 +39,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("A smaller pack that allows for carrying a few more snacks at the cost of eating a few more.\n\n(Provides a 4kg increase to carrying capacity while consuming 5% more calories)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the LightBackpack is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Back")]
+    [Ecopedia("Clothing", "Clothing - Back", createAsSubPage: true)]
     public partial class LightBackpackItem :
         ClothingItem
     {

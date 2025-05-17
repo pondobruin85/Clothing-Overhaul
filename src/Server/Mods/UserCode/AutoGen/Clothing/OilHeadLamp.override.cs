@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("A steel hardhat with a light source for the darkest places.  Fur reinforcement provide comfort in the coldest places.\n\n(Provides 10% reduced calorie use in cold zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the OilHeadLamp is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Head")]
+    [Ecopedia("Clothing", "Clothing - Head", createAsSubPage: true)]
     public partial class OilHeadLampItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

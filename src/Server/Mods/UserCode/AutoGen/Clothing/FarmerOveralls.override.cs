@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Wool overalls reinforced with fur provide amazing warmth in the most frigid places.\n\n(Provides 20% reduced calorie use in cold zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the FarmerOveralls is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Legs")]
+    [Ecopedia("Clothing", "Clothing - Legs", createAsSubPage: true)]
     public partial class FarmerOverallsItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Checkered style pants for hiding the extra pounds of extra calorie consumption.\n\n(Provides 20% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ChefPants is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Legs")]
+    [Ecopedia("Clothing", "Clothing - Legs", createAsSubPage: true)]
     public partial class ChefPantsItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

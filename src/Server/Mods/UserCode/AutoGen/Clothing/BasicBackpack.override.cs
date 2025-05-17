@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [StartsDiscovered] // Tells the server this item starts discovered when a new server is made.
     [Weight(100)] // Defines how heavy the BasicBackpack is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Back")]
+    [Ecopedia("Clothing", "Clothing - Back", createAsSubPage: true)]
     public partial class BasicBackpackItem :
         ClothingItem
     {

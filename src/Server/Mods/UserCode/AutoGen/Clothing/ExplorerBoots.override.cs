@@ -42,7 +42,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Boots with rubber soles and increased movement for comfort yet still beneficial.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ExplorerBoots is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Feet")]
+    [Ecopedia("Clothing", "Clothing - Feet", createAsSubPage: true)]
     public partial class ExplorerBootsItem :
         ClothingItem , IClothingOverhaulBlockMovespeedDictionary
     {

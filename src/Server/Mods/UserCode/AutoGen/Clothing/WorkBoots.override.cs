@@ -45,7 +45,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("High ankle support and rugged soles provide excellent speed through rugged terrain, but average speed on roadways.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the WorkBoots is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Feet")]
+    [Ecopedia("Clothing", "Clothing - Feet", createAsSubPage: true)]
     public partial class WorkBootsItem :
         ClothingItem , IClothingOverhaulBlockMovespeedDictionary
     {

@@ -44,7 +44,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Rudimentary flippers that allow traveling through the water at a much faster pace.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the TallBoots is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Feet")]
+    [Ecopedia("Clothing", "Clothing - Feet", createAsSubPage: true)]
     public partial class WoodenFlippersItem :
         ClothingItem , IClothingOverhaulBlockMovespeedDictionary
     {

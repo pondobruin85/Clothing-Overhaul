@@ -42,7 +42,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("These fancy shoes are sure to impress!  Made for walking the city streets, don't expect to explore the jungle in such refined footwear.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the TailorShoes is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Feet")]
+    [Ecopedia("Clothing", "Clothing - Feet", createAsSubPage: true)]
     public partial class TailorShoesItem :
         ClothingItem , IClothingOverhaulBlockMovespeedDictionary
     {

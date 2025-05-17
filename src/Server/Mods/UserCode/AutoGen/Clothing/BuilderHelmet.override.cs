@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("No longer worry about hitting your head on sharp coral.  This helmet is useful to help you swim without waiting an hour after eating.\n\n(Provides 20% reduced calorie use in water)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the BuilderHelmet is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Head")]
+    [Ecopedia("Clothing", "Clothing - Head", createAsSubPage: true)]
     public partial class BuilderHelmetItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

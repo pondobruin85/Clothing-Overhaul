@@ -42,7 +42,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Whether you're building a bear or a bob, these work boots decrease calories consumed when using tools by 30\u0025)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the BuilderBoots is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Feet")]
+    [Ecopedia("Clothing", "Clothing - Feet", createAsSubPage: true)]
     public partial class BuilderBootsItem :
         ClothingItem , IClothingOverhaulBlockMovespeedDictionary
     {

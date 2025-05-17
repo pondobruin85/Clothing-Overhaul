@@ -42,7 +42,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Rugged boots that provide decent speed through rugged terrain, at the cost of road-speed.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the TallBoots is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Feet")]
+    [Ecopedia("Clothing", "Clothing - Feet", createAsSubPage: true)]
     public partial class TallBootsItem :
         ClothingItem , IClothingOverhaulBlockMovespeedDictionary
     {

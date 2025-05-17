@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Cargo shorts that are ideal for staying comfortable in warmer weather.\n\n(Provides 10% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the Shorts is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Legs")]
+    [Ecopedia("Clothing", "Clothing - Legs", createAsSubPage: true)]
     public partial class ShortsItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Unique fabric weaving technique provide unparalled comfort in the most extreme temperatures.\n\n(Provides 20% reduced calorie use in hot  zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the SmithShirt is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Chest")]
+    [Ecopedia("Clothing", "Clothing - Chest", createAsSubPage: true)]
     public partial class SmithShirtItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

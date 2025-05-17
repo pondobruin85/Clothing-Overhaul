@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Reinforced pants for exploring but still fashionable.  Doubles as swim bottoms!\n\n(Provides 20% reduced calorie use in water)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ExplorerPants is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Legs")]
+    [Ecopedia("Clothing", "Clothing - Legs", createAsSubPage: true)]
     public partial class ExplorerPantsItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

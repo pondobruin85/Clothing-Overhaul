@@ -32,7 +32,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("A sturdy pair of footwear designed to move faster in the wilderness.  Their bulkiness provides slower speed on roadways.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the GardenBoots is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Feet")]
+    [Ecopedia("Clothing", "Clothing - Feet", createAsSubPage: true)]
     public partial class GardenBootsItem :
         ClothingItem , IClothingOverhaulBlockMovespeedDictionary
     {

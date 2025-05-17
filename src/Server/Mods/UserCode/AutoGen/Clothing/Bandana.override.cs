@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Bandanas make excellent cooling towels at the beach.  Don't eat an hour before swimming!\n\n(Provides 10% reduced calorie use in water)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the Bandana is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Head")]
+    [Ecopedia("Clothing", "Clothing - Head", createAsSubPage: true)]
     public partial class BandanaItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

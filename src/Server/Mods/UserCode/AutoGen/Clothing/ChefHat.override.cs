@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("For chefs to keep their hair in one place while stirring the pots or for anyone who eats food.\n\n(Provides 10% reduced calorie use in hot zones)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ChefHat is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Head")]
+    [Ecopedia("Clothing", "Clothing - Head", createAsSubPage: true)]
     public partial class ChefHatItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {

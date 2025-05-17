@@ -42,7 +42,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("Waterproof rubber sole boots with synthetic lining that provides protection against the elements. These provide unmatched speed through the wilds, but suffer on paved surfaces.")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the FarmerBoots is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Feet")]
+    [Ecopedia("Clothing", "Clothing - Feet", createAsSubPage: true)]
     public partial class FarmerBootsItem :
         ClothingItem , IClothingOverhaulBlockMovespeedDictionary
     {

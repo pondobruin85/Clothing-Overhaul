@@ -40,7 +40,8 @@ namespace Eco.Mods.TechTree
     [LocDescription("This shirt may look like a jacket a chef would wear, but it really helps you swim without waiting to eat.\n\n(Provides 40% reduced calorie use in water)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the ChefShirt is.
     [Tag("Clothes")]
-    [Ecopedia("Items", "Clothing", createAsSubPage: true)]
+    [Tag("Clothing - Chest")]
+    [Ecopedia("Clothing", "Clothing - Chest", createAsSubPage: true)]
     public partial class ChefShirtItem :
         ClothingItem , IClothingOverhaulCalorieRateVars
     {
