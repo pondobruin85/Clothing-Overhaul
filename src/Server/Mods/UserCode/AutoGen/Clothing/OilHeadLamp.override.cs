@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Oil Head Lamp")] // Defines the localized name of the item.
-    [LocDescription("A steel hardhat with a light source for the darkest places.  Fur reinforcement provide comfort in the coldest places.\n\n(Provides 10% reduced calorie use in cold zones)")] //The tooltip description for this clothing item.
+    [LocDescription("You no take candle!  \n\n(Provides a light source with the vehicle lights hotkey)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the OilHeadLamp is.
     [Tag("Clothes")]
     [Tag("Clothing - Head")]
@@ -51,9 +51,9 @@ namespace Eco.Mods.TechTree
 
         public override bool Starter                    { get { return false ; } }
 
-        public float TemperatureValue => 0.17f;
+        public float TemperatureValue => 0.5f;
 
-        public float MaxCalorieRateBonus => 0.1f;
+        public float MaxCalorieRateBonus => 0.0f;
 
         public bool IsSwimwear => false;
 
@@ -68,7 +68,7 @@ namespace Eco.Mods.TechTree
     /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [RequiresSkill(typeof(TailoringSkill), 6)]
+    [RequiresSkill(typeof(TailoringSkill), 3)]
     public partial class OilHeadLampRecipe : RecipeFamily
     {
         public OilHeadLampRecipe()
@@ -82,10 +82,10 @@ namespace Eco.Mods.TechTree
                 // type of the item, the amount of the item, the skill required, and the talent used.
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(SteelPlateItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(FurPeltItem), 2, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(NylonFabricItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(TorchItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
+                    new IngredientElement(typeof(IronPlateItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
+                    new IngredientElement(typeof(LeatherHideItem), 2, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
+                    new IngredientElement(typeof(WoolFabricItem), 2, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
+                    new IngredientElement(typeof(TallowCandleItem), 5, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
                 },
 
                 // Define our recipe output items.
@@ -99,7 +99,7 @@ namespace Eco.Mods.TechTree
             this.ExperienceOnCraft = 3; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(1200, typeof(TailoringSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(600, typeof(TailoringSkill));
 
             // Defines our crafting time for the recipe
             this.CraftMinutes = CreateCraftTimeValue(1);
@@ -110,7 +110,7 @@ namespace Eco.Mods.TechTree
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.
-            CraftingComponent.AddRecipe(tableType: typeof(AdvancedTailoringTableObject), recipeFamily: this);
+            CraftingComponent.AddRecipe(tableType: typeof(TailoringTableObject), recipeFamily: this);
         }
 
         /// <summary>Hook for mods to customize RecipeFamily before initialization. You can change recipes, xp, labor, time here.</summary>

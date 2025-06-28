@@ -37,7 +37,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Carbide Helmet Lamp")] // Defines the localized name of the item.
-    [LocDescription("Imitate your favorite dwarf with this stylish cap.  Notice we said imitate.\n\n(Provides 10% reduced calorie use in temperate zones)")] //The tooltip description for this clothing item.
+    [LocDescription("Bright enough to call for Batman.\n\n(Provides a light source with the vehicle lights hotkey)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the CarbideHelmetLamp is.
     [Tag("Clothes")]
     [Tag("Clothing - Head")]
@@ -53,7 +53,7 @@ namespace Eco.Mods.TechTree
 
         public float TemperatureValue => 0.5f;
 
-        public float MaxCalorieRateBonus => 0.1f;
+        public float MaxCalorieRateBonus => 0.0f;
 
         public bool IsSwimwear => false;
 
@@ -85,6 +85,7 @@ namespace Eco.Mods.TechTree
                     new IngredientElement(typeof(PlasticItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
                     new IngredientElement(typeof(BasicCircuitItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
                     new IngredientElement(typeof(NylonFabricItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
+                    new IngredientElement(typeof(LightBulbItem), 1, typeof(TailoringSkill),typeof(TailoringLavishResourcesTalent)),
                 },
 
                 // Define our recipe output items.
