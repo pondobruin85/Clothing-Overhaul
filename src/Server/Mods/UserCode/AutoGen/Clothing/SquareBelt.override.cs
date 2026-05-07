@@ -83,11 +83,10 @@ namespace Eco.Mods.TechTree
                 // type of the item, the amount of the item, the skill required, and the talent used.
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(LeatherHideItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(LinenFabricItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(CopperPlateItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
+                    new IngredientElement(typeof(LeatherHideItem), 1,typeof(TailoringSkill)),
+                    new IngredientElement(typeof(LinenFabricItem), 1,typeof(TailoringSkill)),
+                    new IngredientElement(typeof(CopperPlateItem), 1,typeof(TailoringSkill)),
                 },
-
                 // Define our recipe output items.
                 // For every output item there needs to be one CraftingElement entry with the type of the final item and the amount
                 // to create.
@@ -99,10 +98,11 @@ namespace Eco.Mods.TechTree
             this.ExperienceOnCraft = 3; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(800, typeof(TailoringSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(800,typeof(TailoringSkill));
+
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(1);
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(SquareBeltRecipe), start: 1, skillType: typeof(TailoringSkill));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Square Belt"
             this.ModsPreInitialize();

@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Basic Backpack")] // Defines the localized name of the item.
-    [LocDescription("A basic backpack to carry supplies.")] //The tooltip description for this clothing item.
+    [LocDescription("A basic backpack to carry supplies.\n\n(Increases max carry weight by 5 kg)")] //The tooltip description for this clothing item.
     [StartsDiscovered] // Tells the server this item starts discovered when a new server is made.
     [Weight(100)] // Defines how heavy the BasicBackpack is.
     [Tag("Clothes")]
@@ -51,6 +51,73 @@ namespace Eco.Mods.TechTree
 
         public override bool Starter                    { get { return false ; } }
 
+        // Define our all custom UserStatTypes associated with this clothing item. These can include things such as custom
+        // carry weight or movement speed.
+        private static Dictionary<UserStatType, float> flatStats = new Dictionary<UserStatType, float>()
+        {
+            { UserStatType.MaxCarryWeight, 4000 },
+        };
+
+        // Custom GetFlatStats override to pass through our flatstats variable created above.
+        public override Dictionary<UserStatType, float> GetFlatStats() { return flatStats; }
     }
-    
+
+
+    /// <summary>
+    /// <para>Server side recipe definition for "BasicBackpack".</para>
+    /// <para>More information about RecipeFamily objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.RecipeFamily.html</para>
+    /// </summary>
+    /// <remarks>
+    /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
+    /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
+    /// </remarks>
+    [RequiresSkill(typeof(GatheringSkill), 2)]
+    public partial class BasicBackpackRecipe : RecipeFamily
+    {
+        public BasicBackpackRecipe()
+        {
+            var recipe = new Recipe();
+            recipe.Init(
+                name: "BasicBackpack",  //noloc
+                displayName: Localizer.DoStr("Basic Backpack"),
+
+                // Defines the ingredients needed to craft this recipe. An ingredient items takes the following inputs
+                // type of the item, the amount of the item, the skill required, and the talent used.
+                ingredients: new List<IngredientElement>
+                {
+                    new IngredientElement(typeof(PlantFibersItem), 30,typeof(GatheringSkill)),
+                    new IngredientElement(typeof(CottonBollItem), 24,typeof(GatheringSkill)),
+                },
+                // Define our recipe output items.
+                // For every output item there needs to be one CraftingElement entry with the type of the final item and the amount
+                // to create.
+                items: new List<CraftingElement>
+                {
+                    new CraftingElement<BasicBackpackItem>()
+                });
+            this.Recipes = new List<Recipe> { recipe };
+            this.ExperienceOnCraft = 1; // Defines how much experience is gained when crafted.
+
+            // Defines the amount of labor required and the required skill to add labor
+            this.LaborInCalories = CreateLaborInCaloriesValue(120,typeof(GatheringSkill));
+
+
+            // Defines our crafting time for the recipe
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(BasicBackpackRecipe), start: 2, skillType: typeof(GatheringSkill));
+
+            // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Basic Backpack"
+            this.ModsPreInitialize();
+            this.Initialize(displayText: Localizer.DoStr("Basic Backpack"), recipeType: typeof(BasicBackpackRecipe));
+            this.ModsPostInitialize();
+
+            // Register our RecipeFamily instance with the crafting system so it can be crafted.
+            CraftingComponent.AddRecipe(tableType: typeof(WorkbenchObject), recipeFamily: this);
+        }
+
+        /// <summary>Hook for mods to customize RecipeFamily before initialization. You can change recipes, xp, labor, time here.</summary>
+        partial void ModsPreInitialize();
+
+        /// <summary>Hook for mods to customize RecipeFamily after initialization, but before registration. You can change skill requirements here.</summary>
+        partial void ModsPostInitialize();
+    }
 }

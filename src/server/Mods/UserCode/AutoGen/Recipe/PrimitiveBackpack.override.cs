@@ -47,7 +47,6 @@ namespace Eco.Mods.TechTree
                     new IngredientElement(typeof(PlantFibersItem), 25,typeof(HuntingSkill)),
                     new IngredientElement(typeof(LeatherHideItem), 10,typeof(HuntingSkill)),
                 },
-
                 // Define our recipe output items.
                 // For every output item there needs to be one CraftingElement entry with the type of the final item and the amount
                 // to create.
@@ -60,6 +59,7 @@ namespace Eco.Mods.TechTree
             
             // Defines the amount of labor required and the required skill to add labor
             this.LaborInCalories = CreateLaborInCaloriesValue(1,typeof(HuntingSkill));
+
 
             // Defines our crafting time for the recipe
             this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(PrimitiveBackpackRecipe), start: 2, skillType: typeof(HuntingSkill));
@@ -79,6 +79,5 @@ namespace Eco.Mods.TechTree
         /// <summary>Hook for mods to customize RecipeFamily after initialization, but before registration. You can change skill requirements here.</summary>
         partial void ModsPostInitialize();
     }
-
     */
 }

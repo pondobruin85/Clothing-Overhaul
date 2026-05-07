@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Light Backpack")] // Defines the localized name of the item.
-    [LocDescription("A smaller pack that allows for carrying a few more snacks at the cost of eating a few more.\n\n(Provides a 4kg increase to carrying capacity while consuming 5% more calories)")] //The tooltip description for this clothing item.
+    [LocDescription("A smaller pack that allows for carrying a few more snacks.\n\n(Provides a 6kg increase to carrying capacity")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the LightBackpack is.
     [Tag("Clothes")]
     [Tag("Clothing - Back")]
@@ -54,8 +54,7 @@ namespace Eco.Mods.TechTree
         // carry weight or movement speed.
         private static Dictionary<UserStatType, float> flatStats = new Dictionary<UserStatType, float>()
         {
-            { UserStatType.MaxCarryWeight, 4000 },
-            { UserStatType.CalorieRate, 0.05f },
+            { UserStatType.MaxCarryWeight, 6000 },
         };
 
         // Custom GetFlatStats override to pass through our flatstats variable created above.
@@ -85,11 +84,10 @@ namespace Eco.Mods.TechTree
                 // type of the item, the amount of the item, the skill required, and the talent used.
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(CelluloseFiberItem), 2, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(CottonFabricItem), 2, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(LinenFabricItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),                    
+                    new IngredientElement(typeof(CelluloseFiberItem), 2,typeof(TailoringSkill)),
+                    new IngredientElement(typeof(CottonFabricItem), 2,typeof(TailoringSkill)),
+                    new IngredientElement(typeof(LinenFabricItem), 1,typeof(TailoringSkill)),                    
                 },
-
                 // Define our recipe output items.
                 // For every output item there needs to be one CraftingElement entry with the type of the final item and the amount
                 // to create.
@@ -101,10 +99,11 @@ namespace Eco.Mods.TechTree
             this.ExperienceOnCraft = 3; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(100, typeof(TailoringSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(100,typeof(TailoringSkill));
+
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(1);
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(LightBackpackRecipe), start: 2, skillType: typeof(TailoringSkill));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Light Backpack"
             this.ModsPreInitialize();

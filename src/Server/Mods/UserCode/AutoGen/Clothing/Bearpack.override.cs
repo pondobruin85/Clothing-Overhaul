@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Bearpack")] // Defines the localized name of the item.
-    [LocDescription("Bare bears cannot bear berries without BearPacks\n\n(Increases max carry weight by 15 kg)")] //The tooltip description for this clothing item.
+    [LocDescription("Bare bears cannot bear berries without BearPacks\n\n(Increases max carry weight by 30 kg)")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the Bearpack is.
     [Tag("Clothes")]
     [Tag("Clothing - Back")]
@@ -54,7 +54,7 @@ namespace Eco.Mods.TechTree
         // carry weight or movement speed.
         private static Dictionary<UserStatType, float> flatStats = new Dictionary<UserStatType, float>()
         {
-            { UserStatType.MaxCarryWeight, 12000 },            
+            { UserStatType.MaxCarryWeight, 30000 },            
         };
 
         // Custom GetFlatStats override to pass through our flatstats variable created above.
@@ -84,12 +84,11 @@ namespace Eco.Mods.TechTree
                 // type of the item, the amount of the item, the skill required, and the talent used.
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(NylonFabricItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(CompositeLumberItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(HempMooringRopeItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(LeatherHideItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
+                    new IngredientElement(typeof(NylonFabricItem), 5,typeof(TailoringSkill)),
+                    new IngredientElement(typeof(CompositeLumberItem), 2,typeof(TailoringSkill)),
+                    new IngredientElement(typeof(HempMooringRopeItem), 1,typeof(TailoringSkill)),
+                    new IngredientElement(typeof(LeatherHideItem), 10,typeof(TailoringSkill)),
                 },
-
                 // Define our recipe output items.
                 // For every output item there needs to be one CraftingElement entry with the type of the final item and the amount
                 // to create.
@@ -101,10 +100,11 @@ namespace Eco.Mods.TechTree
             this.ExperienceOnCraft = 3; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(1200, typeof(TailoringSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(1200,typeof(TailoringSkill));
+
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(1);
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(BearpackRecipe), start: 10, skillType: typeof(TailoringSkill));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Bearpack"
             this.ModsPreInitialize();

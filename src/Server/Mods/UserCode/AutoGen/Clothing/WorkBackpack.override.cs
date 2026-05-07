@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
     /// </remarks>
     [Serialized] // Tells the save/load system this object needs to be serialized. 
     [LocDisplayName("Work Backpack")] // Defines the localized name of the item.
-    [LocDescription("A modern pack that allows carrying much more at a modest calorie increase.\n\nIncreases carrying capacity by 8kg, Increases calories rate by 5%")] //The tooltip description for this clothing item.
+    [LocDescription("A modern pack that allows carrying much more.\n\nIncreases carrying capacity by 15kg")] //The tooltip description for this clothing item.
     [Weight(100)] // Defines how heavy the WorkBackpack is.
     [Tag("Clothes")]
     [Tag("Clothing - Back")]
@@ -54,8 +54,7 @@ namespace Eco.Mods.TechTree
         // carry weight or movement speed.
         private static Dictionary<UserStatType, float> flatStats = new Dictionary<UserStatType, float>()
         {
-            { UserStatType.MaxCarryWeight, 8000 },
-            { UserStatType.CalorieRate, 0.05f },
+            { UserStatType.MaxCarryWeight, 15000 },
         };
 
         // Custom GetFlatStats override to pass through our flatstats variable created above.
@@ -85,11 +84,10 @@ namespace Eco.Mods.TechTree
                 // type of the item, the amount of the item, the skill required, and the talent used.
                 ingredients: new List<IngredientElement>
                 {
-                    new IngredientElement(typeof(LeatherHideItem), 4, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(BoardItem), 2, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),
-                    new IngredientElement(typeof(HempMooringRopeItem), 1, typeof(TailoringSkill), typeof(TailoringLavishResourcesTalent)),                    
+                    new IngredientElement(typeof(LeatherHideItem), 4,typeof(TailoringSkill)),
+                    new IngredientElement(typeof(BoardItem), 2,typeof(TailoringSkill)),
+                    new IngredientElement(typeof(HempMooringRopeItem), 1,typeof(TailoringSkill)),                    
                 },
-
                 // Define our recipe output items.
                 // For every output item there needs to be one CraftingElement entry with the type of the final item and the amount
                 // to create.
@@ -101,10 +99,11 @@ namespace Eco.Mods.TechTree
             this.ExperienceOnCraft = 3; // Defines how much experience is gained when crafted.
             
             // Defines the amount of labor required and the required skill to add labor
-            this.LaborInCalories = CreateLaborInCaloriesValue(600, typeof(TailoringSkill));
+            this.LaborInCalories = CreateLaborInCaloriesValue(600,typeof(TailoringSkill));
+
 
             // Defines our crafting time for the recipe
-            this.CraftMinutes = CreateCraftTimeValue(1);
+            this.CraftMinutes = CreateCraftTimeValue(beneficiary: typeof(WorkBackpackRecipe), start: 10, skillType: typeof(TailoringSkill));
 
             // Perform pre/post initialization for user mods and initialize our recipe instance with the display name "Work Backpack"
             this.ModsPreInitialize();
@@ -112,7 +111,7 @@ namespace Eco.Mods.TechTree
             this.ModsPostInitialize();
 
             // Register our RecipeFamily instance with the crafting system so it can be crafted.
-            CraftingComponent.AddRecipe(tableType: typeof(AdvancedTailoringTableObject), recipeFamily: this);
+            CraftingComponent.AddRecipe(tableType: typeof(TailoringTableObject), recipeFamily: this);
         }
 
         /// <summary>Hook for mods to customize RecipeFamily before initialization. You can change recipes, xp, labor, time here.</summary>
